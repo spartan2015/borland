@@ -1,0 +1,305 @@
+object Form1: TForm1
+  Left = 255
+  Top = 152
+  Width = 697
+  Height = 480
+  Caption = 'Form1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 24
+    Width = 41
+    Height = 18
+    Caption = 'Nume'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 48
+    Width = 30
+    Height = 18
+    Caption = 'Fisc'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 72
+    Width = 5
+    Height = 13
+    Caption = 'J'
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 96
+    Width = 45
+    Height = 18
+    Caption = 'Banca'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 120
+    Width = 77
+    Height = 18
+    Caption = 'Cod banca'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 8
+    Top = 144
+    Width = 51
+    Height = 18
+    Caption = 'Telefon'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 8
+    Top = 168
+    Width = 51
+    Height = 18
+    Caption = 'Adresa'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 88
+    Top = 16
+    Width = 185
+    Height = 26
+    DataField = 'Nume'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 88
+    Top = 40
+    Width = 185
+    Height = 26
+    DataField = 'Fisc'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit
+    Left = 88
+    Top = 64
+    Width = 185
+    Height = 26
+    DataField = 'J'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object DBEdit4: TDBEdit
+    Left = 88
+    Top = 88
+    Width = 185
+    Height = 26
+    DataField = 'Banca'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 3
+  end
+  object DBEdit5: TDBEdit
+    Left = 88
+    Top = 112
+    Width = 185
+    Height = 26
+    DataField = 'Cod_banca'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 4
+  end
+  object DBEdit6: TDBEdit
+    Left = 88
+    Top = 136
+    Width = 185
+    Height = 26
+    DataField = 'Telefon'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 5
+  end
+  object DBMemo1: TDBMemo
+    Left = 88
+    Top = 168
+    Width = 185
+    Height = 89
+    DataField = 'Adresa'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 6
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 8
+    Top = 264
+    Width = 300
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 7
+  end
+  object Button1: TButton
+    Left = 8
+    Top = 296
+    Width = 33
+    Height = 25
+    Caption = 'Sus'
+    TabOrder = 8
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 8
+    Top = 328
+    Width = 33
+    Height = 25
+    Caption = 'Jos'
+    TabOrder = 9
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 48
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'Insert'
+    TabOrder = 10
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 48
+    Top = 328
+    Width = 75
+    Height = 25
+    Caption = 'Delete'
+    TabOrder = 11
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 128
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'Save'
+    Enabled = False
+    TabOrder = 12
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 128
+    Top = 328
+    Width = 75
+    Height = 25
+    Caption = 'Modifica'
+    TabOrder = 13
+    OnClick = Button6Click
+  end
+  object Button7: TButton
+    Left = 216
+    Top = 296
+    Width = 97
+    Height = 25
+    Caption = 'Acces'
+    TabOrder = 14
+  end
+  object Button8: TButton
+    Left = 216
+    Top = 328
+    Width = 97
+    Height = 25
+    Caption = 'Creaza '
+    TabOrder = 15
+    OnClick = Button8Click
+  end
+  object DataSource1: TDataSource
+    DataSet = Table1
+    Left = 648
+    Top = 8
+  end
+  object Table1: TTable
+    Active = True
+    DatabaseName = 'BCDEMOS'
+    TableName = 'd:\raluca.db'
+    Left = 648
+    Top = 48
+  end
+end

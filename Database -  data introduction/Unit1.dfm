@@ -1,0 +1,215 @@
+object planconturi: Tplanconturi
+  Left = 173
+  Top = 177
+  Width = 851
+  Height = 460
+  Caption = 'Plan conturi'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 40
+    Top = 16
+    Width = 121
+    Height = 18
+    Caption = 'Conturi debitoare'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 200
+    Top = 16
+    Width = 125
+    Height = 18
+    Caption = 'Conturi creditoare'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Bevel1: TBevel
+    Left = 416
+    Top = 104
+    Width = 265
+    Height = 89
+    Style = bsRaised
+  end
+  object Label3: TLabel
+    Left = 464
+    Top = 112
+    Width = 55
+    Height = 13
+    Caption = 'Fast locator'
+  end
+  object Label4: TLabel
+    Left = 424
+    Top = 136
+    Width = 22
+    Height = 13
+    Caption = 'Field'
+  end
+  object Label5: TLabel
+    Left = 424
+    Top = 168
+    Width = 21
+    Height = 13
+    Caption = 'Text'
+  end
+  object DBMemo1: TDBMemo
+    Left = 16
+    Top = 48
+    Width = 161
+    Height = 169
+    DataField = 'Conturi_debitoare'
+    DataSource = DataSource1
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object DBMemo2: TDBMemo
+    Left = 192
+    Top = 48
+    Width = 169
+    Height = 169
+    DataField = 'Conturi_creditoare'
+    DataSource = DataSource1
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 16
+    Top = 224
+    Width = 350
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 3
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 256
+    Width = 817
+    Height = 169
+    Color = clBlack
+    DataSource = DataSource1
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clLime
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -16
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object Button1: TButton
+    Left = 400
+    Top = 56
+    Width = 75
+    Height = 25
+    Caption = '&Next'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 392
+    Top = 224
+    Width = 75
+    Height = 25
+    Caption = 'Save'
+    TabOrder = 5
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 640
+    Top = 56
+    Width = 75
+    Height = 25
+    Caption = 'Close'
+    TabOrder = 6
+    OnClick = Button3Click
+  end
+  object ComboBox1: TComboBox
+    Left = 464
+    Top = 136
+    Width = 145
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 7
+    Text = 'Simbol'
+    Items.Strings = (
+      'Simbol'
+      'Denumire')
+  end
+  object Edit1: TEdit
+    Left = 464
+    Top = 160
+    Width = 145
+    Height = 21
+    TabOrder = 8
+    OnChange = Edit1Change
+  end
+  object DataSource1: TDataSource
+    DataSet = Table1
+  end
+  object Table1: TTable
+    TableName = 'plan_conturi.DB'
+    Top = 32
+    object Table1Simbol: TStringField
+      FieldName = 'Simbol'
+      Size = 10
+    end
+    object Table1Denumire: TStringField
+      FieldName = 'Denumire'
+      Size = 60
+    end
+    object Table1Tip: TStringField
+      FieldName = 'Tip'
+      Size = 1
+    end
+    object Table1Analitic: TStringField
+      FieldName = 'Analitic'
+      Size = 2
+    end
+    object Table1Sintetic: TStringField
+      FieldName = 'Sintetic'
+      Size = 2
+    end
+    object Table1Conturi_debitoare: TMemoField
+      FieldName = 'Conturi_debitoare'
+      BlobType = ftMemo
+      Size = 1
+    end
+    object Table1Conturi_creditoare: TMemoField
+      FieldName = 'Conturi_creditoare'
+      BlobType = ftMemo
+      Size = 1
+    end
+  end
+end

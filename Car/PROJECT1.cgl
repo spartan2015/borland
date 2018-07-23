@@ -1,0 +1,65 @@
+Functions called:
+ delete (35 times)
+ SysReallocMem (543 times)
+ SysFreeMem (26804 times)
+ SysGetMem (26812 times)
+ realloc (1 times)
+ memcpy (1 times)
+ delete[] (2 times)
+ free (26 times)
+ new[] (14 times)
+ new (40 times)
+ calloc (5 times)
+ malloc (20 times)
+Resource types used:
+ object array (14 allocs, 13 max)
+ object (40 allocs, 28 max)
+ memory block (26838 allocs, 5146 max)
+Modules used:
+ 00400000 03/24/2004 18:15:06 D:\Borland Projects\Car\Project1.exe
+ 01190000 02/01/2002 14:00:00 D:\PROGRA~1\Borland\CBUILD~1\Bin\BORLNDMM.DLL
+ 0CD00000 02/01/2002 14:00:00 D:\PROGRA~1\Borland\CBUILD~1\Bin\CG32.DLL
+ 1F7B0000 08/23/2001 14:00:00 C:\WINDOWS\System32\odbc32.DLL
+ 1F850000 08/23/2001 14:00:00 C:\WINDOWS\System32\odbcint.dll
+ 32600000 02/01/2002 14:00:00 D:\PROGRA~1\Borland\CBUILD~1\Bin\CC3260MT.DLL
+ 40000000 02/01/2002 14:00:00 C:\WINDOWS\System32\rtl60.bpl
+ 400B0000 02/01/2002 14:00:00 C:\WINDOWS\System32\vcl60.bpl
+ 40200000 01/01/1985 01:02:46 C:\WINDOWS\System32\vclx60.bpl
+ 40310000 02/01/2002 14:00:00 C:\WINDOWS\System32\dbrtl60.bpl
+ 40670000 02/01/2002 14:00:00 C:\WINDOWS\System32\vcldb60.bpl
+ 406C0000 01/01/1985 01:02:46 C:\WINDOWS\System32\bdertl60.bpl
+ 40850000 02/01/2002 14:00:00 C:\WINDOWS\System32\qrpt60.bpl
+ 4BDE0000 05/10/2001 16:00:00 D:\Program Files\Common Files\Borland
+ Shared\BDE\IDAPI32.DLL
+ 4C5E0000 05/10/2001 16:00:00 D:\Program Files\Common Files\Borland
+ Shared\BDE\idsql32.DLL
+ 71950000 08/23/2001 14:00:00
+ C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.
+0.0_x-ww_1382d70a\comctl32.dll
+ 71AA0000 08/23/2001 14:00:00 C:\WINDOWS\System32\WS2HELP.dll
+ 71AB0000 08/23/2001 14:00:00 C:\WINDOWS\System32\WS2_32.dll
+ 71AD0000 08/23/2001 14:00:00 C:\WINDOWS\System32\wsock32.dll
+ 71B20000 08/23/2001 14:00:00 C:\WINDOWS\system32\mpr.dll
+ 73000000 08/23/2001 14:00:00 C:\WINDOWS\System32\winspool.drv
+ 74720000 08/23/2001 14:00:00 C:\WINDOWS\System32\MSCTF.dll
+ 74D30000 08/23/2001 14:00:00 C:\WINDOWS\System32\oledlg.dll
+ 763B0000 08/23/2001 14:00:00 C:\WINDOWS\system32\comdlg32.dll
+ 76840000 08/17/2001 22:36:34
+ C:\WINDOWS\System32\spool\DRIVERS\W32X86\3\UNIDRVUI.DLL
+ 76880000 08/17/2001 22:36:34
+ C:\WINDOWS\System32\spool\DRIVERS\W32X86\3\UNIDRV.DLL
+ 76B40000 08/23/2001 14:00:00 C:\WINDOWS\System32\winmm.dll
+ 77120000 08/23/2001 14:00:00 C:\WINDOWS\system32\oleaut32.dll
+ 771B0000 08/23/2001 14:00:00 C:\WINDOWS\system32\OLE32.DLL
+ 772D0000 08/23/2001 14:00:00 C:\WINDOWS\system32\SHLWAPI.dll
+ 77340000 08/23/2001 14:00:00 C:\WINDOWS\system32\comctl32.dll
+ 773D0000 08/23/2001 14:00:00 C:\WINDOWS\system32\SHELL32.dll
+ 77C00000 08/23/2001 14:00:00 C:\WINDOWS\system32\version.dll
+ 77C10000 08/23/2001 14:00:00 C:\WINDOWS\system32\MSVCRT.DLL
+ 77C70000 08/23/2001 14:00:00 C:\WINDOWS\system32\GDI32.dll
+ 77CC0000 08/23/2001 14:00:00 C:\WINDOWS\system32\RPCRT4.dll
+ 77D40000 08/23/2001 14:00:00 C:\WINDOWS\system32\user32.dll
+ 77DD0000 08/23/2001 14:00:00 C:\WINDOWS\system32\ADVAPI32.dll
+ 77E60000 08/23/2001 14:00:00 C:\WINDOWS\system32\kernel32.dll
+ 77F50000 08/23/2001 14:00:00 C:\WINDOWS\System32\ntdll.dll
+==========================================

@@ -1,0 +1,155 @@
+object Form1: TForm1
+  Left = 240
+  Top = 145
+  Width = 695
+  Height = 480
+  Caption = 'Form1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = -8
+    Top = 136
+    Width = 681
+    Height = 89
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 424
+    Width = 240
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 48
+    Top = 88
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Left = 296
+    Top = 80
+    Width = 121
+    Height = 21
+    TabOrder = 3
+    Text = 'Edit1'
+  end
+  object Button2: TButton
+    Left = 432
+    Top = 72
+    Width = 75
+    Height = 25
+    Caption = 'Button2'
+    TabOrder = 4
+    OnClick = Button2Click
+  end
+  object DBGrid2: TDBGrid
+    Left = -8
+    Top = 240
+    Width = 681
+    Height = 120
+    DataSource = DataSource2
+    TabOrder = 5
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object Table4: TTable
+    Active = True
+    DatabaseName = 'd:\'
+    TableName = 'A1_2003august.DB'
+    Left = 224
+    Top = 8
+    object Table4An: TFloatField
+      DisplayWidth = 12
+      FieldName = 'An'
+    end
+    object Table4Ln: TIntegerField
+      DisplayWidth = 12
+      FieldName = 'Ln'
+    end
+    object Table4Cf: TFloatField
+      DisplayWidth = 17
+      FieldName = 'Cf'
+    end
+    object Table4Cn: TFloatField
+      DisplayWidth = 12
+      FieldName = 'Cn'
+    end
+    object Table4Nume: TStringField
+      DisplayWidth = 36
+      FieldName = 'Nume'
+      Size = 30
+    end
+    object Table4Cnp: TFloatField
+      DisplayWidth = 12
+      FieldName = 'Cnp'
+    end
+    object Table4Rm: TIntegerField
+      DisplayWidth = 12
+      FieldName = 'Rm'
+    end
+    object Table4Cv: TIntegerField
+      DisplayWidth = 12
+      FieldName = 'Cv'
+    end
+    object Table4Sbl: TFloatField
+      DisplayWidth = 12
+      FieldName = 'Sbl'
+    end
+    object Table4Cid: TFloatField
+      DisplayWidth = 12
+      FieldName = 'Cid'
+    end
+    object Table4Civ: TFloatField
+      DisplayWidth = 12
+      FieldName = 'Civ'
+    end
+    object Table4Cin: TFloatField
+      DisplayWidth = 12
+      FieldName = 'Cin'
+    end
+  end
+  object Table3: TTable
+    DatabaseName = 'a:\'
+    TableName = 'A1'
+    TableType = ttFoxPro
+    Left = 176
+    Top = 8
+  end
+  object DataSource1: TDataSource
+    DataSet = Table3
+    Left = 8
+    Top = 8
+  end
+  object DataSource2: TDataSource
+    DataSet = Table4
+    Left = 328
+    Top = 8
+  end
+  object BatchMove1: TBatchMove
+    Destination = Table3
+    Source = Table4
+    Left = 224
+    Top = 64
+  end
+end

@@ -1,0 +1,36 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+USERES("Project1.res");
+USEFORM("Unit1.cpp", Main);
+USEFORM("Unit2.cpp", dm); /* TDataModule: File Type */
+USEFORM("Unit3.cpp", angajati);
+USEFORM("Unit4.cpp", fise);
+USEFORM("Unit5.cpp", raport_fisa);
+USEFORM("Unit6.cpp", sold_initial);
+USEFORM("Unit7.cpp", filtercon);
+USEFORM("Unit8.cpp", raport_central);
+//---------------------------------------------------------------------------
+WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
+{
+        try
+        {
+                 Application->Initialize();
+                 Application->CreateForm(__classid(TMain), &Main);
+                 Application->CreateForm(__classid(Tdm), &dm);
+                 Application->CreateForm(__classid(Tangajati), &angajati);
+                 Application->CreateForm(__classid(Tfise), &fise);
+                 Application->CreateForm(__classid(Traport_fisa), &raport_fisa);
+                 Application->CreateForm(__classid(Tsold_initial), &sold_initial);
+                 Application->CreateForm(__classid(Tfiltercon), &filtercon);
+                 Application->CreateForm(__classid(Traport_central), &raport_central);
+                 Application->Run();
+        }
+        catch (Exception &exception)
+        {
+                 Application->ShowException(&exception);
+        }
+        return 0;
+}
+//---------------------------------------------------------------------------

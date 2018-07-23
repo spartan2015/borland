@@ -1,0 +1,64 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+Table1->Post();
+Table1->Next();
+AnsiString dat=(Table1Simbol->AsString);
+int dat1;
+dat1=dat.Length();
+while (dat1!=3) {
+        Table1->Next();
+        dat=(Table1Simbol->AsString);
+        dat1=dat.Length();   }
+FocusControl(DBMemo1);
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+Table1->Post();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
+{
+Table1->Close();        
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+Table1->Close();
+Application->Terminate();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::FormCreate(TObject *Sender)
+{
+Table1->Active=true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Edit1Change(TObject *Sender)
+{
+Set < TLocateOption,0,1 > flags;
+flags << loCaseInsensitive <<loPartialKey;
+Table1->Locate(ComboBox1->Text,Edit1->Text,flags);
+}
+//---------------------------------------------------------------------------
+

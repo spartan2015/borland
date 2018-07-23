@@ -1,0 +1,648 @@
+object setup: Tsetup
+  Left = 192
+  Top = 107
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Setari'
+  ClientHeight = 464
+  ClientWidth = 794
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 20
+  object Label115: TLabel
+    Left = 96
+    Top = 24
+    Width = 33
+    Height = 20
+    Caption = 'Intre'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label100: TLabel
+    Left = 40
+    Top = 0
+    Width = 156
+    Height = 18
+    Caption = 'Setari sporuri vechime'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label116: TLabel
+    Left = 240
+    Top = 24
+    Width = 14
+    Height = 20
+    Caption = '%'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label101: TLabel
+    Left = 352
+    Top = 16
+    Width = 129
+    Height = 18
+    Caption = 'Deducere de baza'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label102: TLabel
+    Left = 488
+    Top = 16
+    Width = 129
+    Height = 20
+    Caption = 'Cota maxima CAS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label109: TLabel
+    Left = 520
+    Top = 168
+    Width = 111
+    Height = 20
+    Caption = 'Cote impozitare'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label103: TLabel
+    Left = 128
+    Top = 168
+    Width = 159
+    Height = 20
+    Caption = 'Deduceri suplimentare'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label104: TLabel
+    Left = 8
+    Top = 216
+    Width = 74
+    Height = 20
+    Caption = '1. Pt. sotie'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label105: TLabel
+    Left = 8
+    Top = 240
+    Width = 126
+    Height = 20
+    Caption = '2. Pt. Primii 2 copii'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label106: TLabel
+    Left = 8
+    Top = 264
+    Width = 227
+    Height = 20
+    Caption = '3. Pt. fiecare din urmatorii 2 copii'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label107: TLabel
+    Left = 8
+    Top = 288
+    Width = 194
+    Height = 20
+    Caption = '4. Pt. pers. handicapate gr.I'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label108: TLabel
+    Left = 8
+    Top = 312
+    Width = 199
+    Height = 20
+    Caption = '5. Pt. pers. handicapate gr.II'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label110: TLabel
+    Left = 368
+    Top = 216
+    Width = 13
+    Height = 20
+    Caption = '1.'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label111: TLabel
+    Left = 368
+    Top = 240
+    Width = 13
+    Height = 20
+    Caption = '2.'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label112: TLabel
+    Left = 368
+    Top = 264
+    Width = 13
+    Height = 20
+    Caption = '3.'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label113: TLabel
+    Left = 368
+    Top = 288
+    Width = 13
+    Height = 20
+    Caption = '4.'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label114: TLabel
+    Left = 368
+    Top = 312
+    Width = 13
+    Height = 20
+    Caption = '5.'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label126: TLabel
+    Left = 8
+    Top = 360
+    Width = 33
+    Height = 20
+    Caption = 'CAS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label127: TLabel
+    Left = 8
+    Top = 384
+    Width = 72
+    Height = 20
+    Caption = 'CAS firma'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label132: TLabel
+    Left = 8
+    Top = 408
+    Width = 155
+    Height = 20
+    Caption = 'Cheltuieli profesionale'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label165: TLabel
+    Left = 248
+    Top = 360
+    Width = 49
+    Height = 20
+    Caption = 'CAS D'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label166: TLabel
+    Left = 248
+    Top = 384
+    Width = 48
+    Height = 20
+    Caption = 'CAS S'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label128: TLabel
+    Left = 400
+    Top = 352
+    Width = 45
+    Height = 20
+    Caption = 'Somaj'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label129: TLabel
+    Left = 400
+    Top = 376
+    Width = 84
+    Height = 20
+    Caption = 'Somaj firma'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label130: TLabel
+    Left = 592
+    Top = 352
+    Width = 66
+    Height = 20
+    Caption = 'Sanatate'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label131: TLabel
+    Left = 592
+    Top = 376
+    Width = 105
+    Height = 20
+    Caption = 'Sanatate firma'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 248
+    Top = 408
+    Width = 110
+    Height = 20
+    Caption = 'Fond accidente'
+  end
+  object Label2: TLabel
+    Left = 248
+    Top = 432
+    Width = 163
+    Height = 20
+    Caption = 'Comision stat plata CM'
+  end
+  object Label3: TLabel
+    Left = 512
+    Top = 424
+    Width = 14
+    Height = 20
+    Caption = '%'
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 40
+    Width = 320
+    Height = 120
+    DataSource = D1.DataSource5
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object DBEdit85: TDBEdit
+    Left = 352
+    Top = 40
+    Width = 129
+    Height = 28
+    DataField = 'D_baza'
+    DataSource = D1.DataSource6
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DBEdit86: TDBEdit
+    Left = 488
+    Top = 40
+    Width = 129
+    Height = 28
+    DataField = 'Cota_cas'
+    DataSource = D1.DataSource6
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBGrid3: TDBGrid
+    Left = 240
+    Top = 192
+    Width = 113
+    Height = 153
+    DataSource = D1.DataSource7
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object DBGrid4: TDBGrid
+    Left = 384
+    Top = 192
+    Width = 401
+    Height = 153
+    DataSource = D1.DataSource8
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object DBEdit78: TDBEdit
+    Left = 168
+    Top = 400
+    Width = 73
+    Height = 28
+    DataField = 'cheltuieli_profesionale'
+    DataSource = D1.DataSource9
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 5
+  end
+  object DBEdit77: TDBEdit
+    Left = 168
+    Top = 376
+    Width = 73
+    Height = 28
+    DataField = 'cas_firma'
+    DataSource = D1.DataSource9
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 6
+  end
+  object DBEdit76: TDBEdit
+    Left = 168
+    Top = 352
+    Width = 73
+    Height = 28
+    DataField = 'cas'
+    DataSource = D1.DataSource9
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 7
+  end
+  object DBEdit99: TDBEdit
+    Left = 304
+    Top = 376
+    Width = 81
+    Height = 28
+    DataField = 'cas_s'
+    DataSource = D1.DataSource9
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 8
+  end
+  object DBEdit98: TDBEdit
+    Left = 304
+    Top = 352
+    Width = 81
+    Height = 28
+    DataField = 'cas_d'
+    DataSource = D1.DataSource9
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 9
+  end
+  object DBEdit80: TDBEdit
+    Left = 496
+    Top = 376
+    Width = 81
+    Height = 28
+    DataField = 'somaj_firma'
+    DataSource = D1.DataSource9
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 10
+  end
+  object DBEdit79: TDBEdit
+    Left = 496
+    Top = 352
+    Width = 81
+    Height = 28
+    DataField = 'somaj'
+    DataSource = D1.DataSource9
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 11
+  end
+  object DBEdit81: TDBEdit
+    Left = 696
+    Top = 352
+    Width = 89
+    Height = 28
+    DataField = 'sanatate'
+    DataSource = D1.DataSource9
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 12
+  end
+  object DBEdit82: TDBEdit
+    Left = 696
+    Top = 376
+    Width = 89
+    Height = 28
+    DataField = 'sanatate_firma'
+    DataSource = D1.DataSource9
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 13
+  end
+  object Button28: TButton
+    Left = 616
+    Top = 432
+    Width = 75
+    Height = 25
+    Caption = 'Save'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 14
+    OnClick = Button28Click
+  end
+  object Button29: TButton
+    Left = 712
+    Top = 432
+    Width = 75
+    Height = 25
+    Caption = 'Exit'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 15
+    OnClick = Button29Click
+  end
+  object DBEdit1: TDBEdit
+    Left = 420
+    Top = 404
+    Width = 69
+    Height = 28
+    DataField = 'fond_accidente'
+    DataSource = D1.DataSource9
+    TabOrder = 16
+  end
+  object DBEdit2: TDBEdit
+    Left = 420
+    Top = 432
+    Width = 69
+    Height = 28
+    DataField = 'comision_cm'
+    DataSource = D1.DataSource9
+    TabOrder = 17
+  end
+end

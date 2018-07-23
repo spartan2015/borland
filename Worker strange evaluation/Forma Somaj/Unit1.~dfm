@@ -1,0 +1,246 @@
+object Form1: TForm1
+  Left = 192
+  Top = 107
+  Width = 696
+  Height = 480
+  Caption = 'Form1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label154: TLabel
+    Left = 136
+    Top = 0
+    Width = 289
+    Height = 45
+    Caption = 'Declaratii Somaj'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -40
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label144: TLabel
+    Left = 8
+    Top = 60
+    Width = 13
+    Height = 13
+    Caption = 'An'
+  end
+  object Label143: TLabel
+    Left = 128
+    Top = 60
+    Width = 24
+    Height = 13
+    Caption = 'Luna'
+  end
+  object Bevel3: TBevel
+    Left = 0
+    Top = 48
+    Width = 625
+    Height = 36
+    Style = bsRaised
+  end
+  object Bevel5: TBevel
+    Left = 328
+    Top = 104
+    Width = 185
+    Height = 73
+  end
+  object Label155: TLabel
+    Left = 360
+    Top = 112
+    Width = 80
+    Height = 13
+    Caption = 'Total somaj virat:'
+  end
+  object Bevel6: TBevel
+    Left = 0
+    Top = 354
+    Width = 625
+    Height = 63
+    Style = bsRaised
+  end
+  object Label157: TLabel
+    Left = 8
+    Top = 360
+    Width = 118
+    Height = 13
+    Caption = 'Cale director descarcare:'
+  end
+  object Bevel4: TBevel
+    Left = 0
+    Top = 82
+    Width = 625
+    Height = 273
+  end
+  object ComboBox6: TComboBox
+    Left = 32
+    Top = 52
+    Width = 89
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 0
+    Text = '2003'
+    Items.Strings = (
+      '2003'
+      '2004'
+      '2005')
+  end
+  object ComboBox7: TComboBox
+    Left = 168
+    Top = 52
+    Width = 113
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 1
+    Text = 'august'
+    Items.Strings = (
+      'ianuarie'
+      'februarie'
+      'martie'
+      'aprilie'
+      'mai'
+      'iunie'
+      'iulie'
+      'august'
+      'septembrie'
+      'octombrie'
+      'noiembrie'
+      'decembrie')
+  end
+  object CSpinEdit1: TCSpinEdit
+    Left = 360
+    Top = 136
+    Width = 65
+    Height = 30
+    TabStop = True
+    Increment = 5
+    MaxValue = 100
+    ParentColor = False
+    TabOrder = 2
+    Value = 100
+  end
+  object Edit12: TEdit
+    Left = 192
+    Top = 360
+    Width = 377
+    Height = 28
+    TabOrder = 3
+    Text = 'A:\'
+  end
+  object Button37: TButton
+    Left = 240
+    Top = 389
+    Width = 169
+    Height = 25
+    Caption = 'Descarca datele'
+    TabOrder = 4
+  end
+  object Button36: TButton
+    Left = 568
+    Top = 360
+    Width = 49
+    Height = 28
+    Caption = '...'
+    TabOrder = 5
+  end
+  object DateTimePicker2: TDateTimePicker
+    Left = 160
+    Top = 317
+    Width = 121
+    Height = 28
+    CalAlignment = dtaLeft
+    Date = 37855.0626232639
+    Time = 37855.0626232639
+    DateFormat = dfShort
+    DateMode = dmComboBox
+    Kind = dtkDate
+    ParseInput = False
+    TabOrder = 6
+  end
+  object Edit11: TEdit
+    Left = 160
+    Top = 289
+    Width = 121
+    Height = 28
+    TabOrder = 7
+    Text = '0'
+  end
+  object Edit10: TEdit
+    Left = 160
+    Top = 262
+    Width = 121
+    Height = 28
+    TabOrder = 8
+    Text = '0'
+  end
+  object Edit9: TEdit
+    Left = 160
+    Top = 235
+    Width = 121
+    Height = 28
+    TabOrder = 9
+    Text = '0'
+  end
+  object Edit8: TEdit
+    Left = 160
+    Top = 208
+    Width = 121
+    Height = 28
+    TabOrder = 10
+    Text = '0'
+  end
+  object Edit7: TEdit
+    Left = 160
+    Top = 142
+    Width = 121
+    Height = 28
+    TabOrder = 11
+    Text = '0'
+  end
+  object DateTimePicker1: TDateTimePicker
+    Left = 160
+    Top = 115
+    Width = 121
+    Height = 28
+    CalAlignment = dtaLeft
+    Date = 37855.059859838
+    Time = 37855.059859838
+    DateFormat = dfShort
+    DateMode = dmComboBox
+    Kind = dtkDate
+    ParseInput = False
+    TabOrder = 12
+  end
+  object Edit6: TEdit
+    Left = 160
+    Top = 88
+    Width = 121
+    Height = 28
+    TabOrder = 13
+    Text = '0'
+  end
+  object Button35: TButton
+    Left = 304
+    Top = 53
+    Width = 313
+    Height = 25
+    Caption = 'Creaza'
+    TabOrder = 14
+  end
+  object Button38: TButton
+    Left = 613
+    Top = 416
+    Width = 75
+    Height = 25
+    Caption = '&Inchide'
+    TabOrder = 15
+  end
+end

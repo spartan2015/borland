@@ -1,0 +1,258 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Left = 244
+  Top = 172
+  Height = 480
+  Width = 696
+  object DataSource1: TDataSource
+    DataSet = Table1
+    Left = 16
+    Top = 8
+  end
+  object Table1: TTable
+    DatabaseName = 'data\'
+    TableName = 'evidenta_bilant.DB'
+    Left = 16
+    Top = 56
+    object Table1an: TIntegerField
+      FieldName = 'an'
+    end
+    object Table1luna: TStringField
+      FieldName = 'luna'
+      Size = 12
+    end
+  end
+  object DataSource2: TDataSource
+    DataSet = Table2
+    Left = 88
+    Top = 8
+  end
+  object Table2: TTable
+    DatabaseName = 'data\'
+    TableName = 'jurnal_august.DB'
+    Left = 88
+    Top = 56
+    object Table2Nr_crt: TIntegerField
+      FieldName = 'Nr_crt'
+    end
+    object Table2Data_inregistrare: TDateField
+      FieldName = 'Data_inregistrare'
+    end
+    object Table2Explicatii: TStringField
+      FieldName = 'Explicatii'
+      Size = 25
+    end
+    object Table2Simbol_debit: TStringField
+      FieldName = 'Simbol_debit'
+      Size = 12
+    end
+    object Table2Simbol_credit: TStringField
+      FieldName = 'Simbol_credit'
+      Size = 12
+    end
+    object Table2Sume_debit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Sume_debit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+    object Table2Sume_credit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Sume_credit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+  end
+  object DataSource3: TDataSource
+    DataSet = Table3
+    Left = 152
+    Top = 8
+  end
+  object Table3: TTable
+    DatabaseName = 'data\'
+    Filtered = True
+    StoreDefs = True
+    TableName = 'bilant2003august.DB'
+    Left = 152
+    Top = 56
+    object Table3Cont: TStringField
+      FieldName = 'Cont'
+      Size = 10
+    end
+    object Table3Denumire: TStringField
+      FieldName = 'Denumire'
+      Size = 60
+    end
+    object Table3Debit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Debit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+    object Table3Credit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Credit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+    object Table3sold_initial_debit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'sold_initial_debit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+    object Table3sold_initial_credit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'sold_initial_credit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+    object Table3rulaj_cumulat_debit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'rulaj_cumulat_debit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+    object Table3rulaj_cumulat_credit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'rulaj_cumulat_credit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+    object Table3total_sume_debit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'total_sume_debit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+    object Table3total_sume_credit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'total_sume_credit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+    object Table3sold_final_debit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'sold_final_debit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+    object Table3sold_final_credit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'sold_final_credit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+  end
+  object DataSource4: TDataSource
+    DataSet = Table4
+    Left = 16
+    Top = 112
+  end
+  object Table4: TTable
+    DatabaseName = 'data\dat\'
+    TableName = 'plan_conturi.DB'
+    Left = 16
+    Top = 160
+    object Table4Simbol: TStringField
+      FieldName = 'Simbol'
+      Size = 10
+    end
+    object Table4Denumire: TStringField
+      FieldName = 'Denumire'
+      Size = 60
+    end
+    object Table4Tip: TStringField
+      FieldName = 'Tip'
+      Size = 1
+    end
+    object Table4Analitic: TStringField
+      FieldName = 'Analitic'
+      Size = 2
+    end
+    object Table4Sintetic: TStringField
+      FieldName = 'Sintetic'
+      Size = 2
+    end
+    object Table4Conturi_debitoare: TMemoField
+      FieldName = 'Conturi_debitoare'
+      BlobType = ftMemo
+      Size = 1
+    end
+    object Table4Conturi_creditoare: TMemoField
+      FieldName = 'Conturi_creditoare'
+      BlobType = ftMemo
+      Size = 1
+    end
+  end
+  object DataSource5: TDataSource
+    DataSet = Table5
+    Left = 16
+    Top = 216
+  end
+  object Table5: TTable
+    DatabaseName = 'data\dat\'
+    TableName = 'sold_initial.DB'
+    Left = 16
+    Top = 272
+    object Table5Cont: TStringField
+      FieldName = 'Cont'
+      Size = 10
+    end
+    object Table5Denumire: TStringField
+      FieldName = 'Denumire'
+      Size = 60
+    end
+    object Table5Debit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Debit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+    object Table5Credit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Credit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+  end
+  object BatchMove1: TBatchMove
+    Destination = Table5
+    Mappings.Strings = (
+      'Cont=Cont'
+      'Denumire=Denumire'
+      'Debit=sold_final_debit'
+      'Credit=sold_final_credit')
+    Source = Table3
+    Transliterate = False
+    Left = 16
+    Top = 328
+  end
+  object DataSource6: TDataSource
+    DataSet = Table6
+    Left = 88
+    Top = 216
+  end
+  object Table6: TTable
+    DatabaseName = 'data\dat\'
+    TableName = 'rulaj_cumulat.DB'
+    Left = 88
+    Top = 272
+    object Table6Cont: TStringField
+      FieldName = 'Cont'
+      Size = 10
+    end
+    object Table6Denumire: TStringField
+      FieldName = 'Denumire'
+      Size = 60
+    end
+    object Table6Debit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Debit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+    object Table6Credit: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Credit'
+      DisplayFormat = '###,###,###,###,##0'
+    end
+  end
+  object DataSource7: TDataSource
+    DataSet = Table7
+    Left = 160
+    Top = 216
+  end
+  object Table7: TTable
+    Active = True
+    DatabaseName = 'data\'
+    TableName = 'raluca'
+    Left = 160
+    Top = 272
+  end
+end

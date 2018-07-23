@@ -1,0 +1,29 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit9H
+#define Unit9H
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <ExtCtrls.hpp>
+#include <FileCtrl.hpp>
+//---------------------------------------------------------------------------
+class TDir_dialog : public TForm
+{
+__published:	// IDE-managed Components
+        TLabel *Label1;
+        TBevel *Bevel1;
+        TDirectoryListBox *DirectoryListBox1;
+        TDriveComboBox *DriveComboBox1;
+        TButton *Button1;
+        void __fastcall Button1Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+        __fastcall TDir_dialog(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TDir_dialog *Dir_dialog;
+//---------------------------------------------------------------------------
+#endif

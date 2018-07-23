@@ -1,0 +1,703 @@
+object Form2: TForm2
+  Left = 244
+  Top = 113
+  Width = 696
+  Height = 480
+  Caption = 'Firma'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Scaled = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object QuickRep1: TQuickRep
+    Left = 0
+    Top = -8
+    Width = 1587
+    Height = 1123
+    Frame.Color = clBlack
+    Frame.DrawTop = False
+    Frame.DrawBottom = False
+    Frame.DrawLeft = False
+    Frame.DrawRight = False
+    DataSet = Table1
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    Functions.Strings = (
+      'PAGENUMBER'
+      'COLUMNNUMBER'
+      'REPORTTITLE')
+    Functions.DATA = (
+      '0'
+      '0'
+      #39#39)
+    Options = [FirstPageHeader, LastPageFooter]
+    Page.Columns = 1
+    Page.Orientation = poLandscape
+    Page.PaperSize = A3
+    Page.Values = (
+      127
+      2970
+      127
+      4200
+      127
+      127
+      0)
+    PrinterSettings.Copies = 1
+    PrinterSettings.Duplex = False
+    PrinterSettings.FirstPage = 0
+    PrinterSettings.LastPage = 0
+    PrinterSettings.OutputBin = Auto
+    PrintIfEmpty = True
+    SnapToGrid = True
+    Units = Inches
+    Zoom = 100
+    object QRBand1: TQRBand
+      Left = 48
+      Top = 48
+      Width = 1491
+      Height = 72
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AlignToBottom = False
+      Color = clWhite
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        190.5
+        3944.9375)
+      BandType = rbTitle
+      object QRLabel1: TQRLabel
+        Left = 280
+        Top = 8
+        Width = 251
+        Height = 37
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          97.8958333333333
+          740.833333333333
+          21.1666666666667
+          664.104166666667)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Stat plata - grupat'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -32
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 24
+      end
+    end
+    object QRBand4: TQRBand
+      Left = 48
+      Top = 120
+      Width = 1491
+      Height = 33
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AlignToBottom = False
+      Color = clWhite
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        87.3125
+        3944.9375)
+      BandType = rbColumnHeader
+      object QRLabel2: TQRLabel
+        Left = 8
+        Top = 8
+        Width = 54
+        Height = 23
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          60.8541666666667
+          21.1666666666667
+          21.1666666666667
+          142.875)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Nume'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 14
+      end
+      object QRLabel3: TQRLabel
+        Left = 72
+        Top = 8
+        Width = 85
+        Height = 23
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          60.8541666666667
+          190.5
+          21.1666666666667
+          224.895833333333)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Prenume'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 14
+      end
+      object QRLabel4: TQRLabel
+        Left = 168
+        Top = 8
+        Width = 70
+        Height = 23
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          60.8541666666667
+          444.5
+          21.1666666666667
+          185.208333333333)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Functia'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 14
+      end
+      object QRLabel5: TQRLabel
+        Left = 256
+        Top = 8
+        Width = 109
+        Height = 23
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          60.8541666666667
+          677.333333333333
+          21.1666666666667
+          288.395833333333)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Salar tarifar'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 14
+      end
+    end
+    object QRBand2: TQRBand
+      Left = 48
+      Top = 193
+      Width = 1491
+      Height = 31
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = True
+      Frame.DrawRight = True
+      AlignToBottom = False
+      Color = clWhite
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        81.28
+        3944.9375)
+      BandType = rbDetail
+      object QRDBText1: TQRDBText
+        Left = 8
+        Top = 8
+        Width = 51
+        Height = 23
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          60.8541666666667
+          21.1666666666667
+          21.1666666666667
+          134.9375)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Color = clWhite
+        DataSet = Table1
+        DataField = 'Nume'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 14
+      end
+      object QRDBText2: TQRDBText
+        Left = 80
+        Top = 8
+        Width = 78
+        Height = 23
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          60.8541666666667
+          211.666666666667
+          21.1666666666667
+          206.375)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Color = clWhite
+        DataSet = Table1
+        DataField = 'Prenume'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 14
+      end
+      object QRDBText3: TQRDBText
+        Left = 168
+        Top = 8
+        Width = 62
+        Height = 23
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          60.8541666666667
+          444.5
+          21.1666666666667
+          164.041666666667)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Color = clWhite
+        DataSet = Table1
+        DataField = 'Functia'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 14
+      end
+      object QRDBText4: TQRDBText
+        Left = 264
+        Top = 8
+        Width = 102
+        Height = 23
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          60.8541666666667
+          698.5
+          21.1666666666667
+          269.875)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Color = clWhite
+        DataSet = Table1
+        DataField = 'Salar_tarifar'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 14
+      end
+    end
+    object QRGroup1: TQRGroup
+      Left = 48
+      Top = 153
+      Width = 1491
+      Height = 40
+      Frame.Color = clBlack
+      Frame.DrawTop = True
+      Frame.DrawBottom = False
+      Frame.DrawLeft = True
+      Frame.DrawRight = True
+      AlignToBottom = False
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ForceNewColumn = False
+      ForceNewPage = False
+      ParentFont = False
+      Size.Values = (
+        105.833333333333
+        3944.9375)
+      Expression = 'COPY(Table1.Nume,1,1)'
+      Master = QuickRep1
+      ReprintOnNewPage = False
+      object QRExpr1: TQRExpr
+        Left = 8
+        Top = 8
+        Width = 143
+        Height = 23
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          60.8541666666667
+          21.1666666666667
+          21.1666666666667
+          378.354166666667)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Color = clWhite
+        ResetAfterPrint = False
+        Transparent = False
+        WordWrap = True
+        Expression = 'copy(nume,1,1)'
+        FontSize = 14
+      end
+    end
+    object QRChildBand1: TQRChildBand
+      Left = 48
+      Top = 224
+      Width = 1491
+      Height = 25
+      Frame.Color = clBlack
+      Frame.DrawTop = True
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AlignToBottom = False
+      Color = clWhite
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        66.1458333333333
+        3944.9375)
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = Table1
+  end
+  object Table1: TTable
+    Active = True
+    DatabaseName = 'BCDEMOS'
+    TableName = 'centralizator.DB'
+    Top = 32
+    object Table1Luna: TStringField
+      FieldName = 'Luna'
+      Size = 10
+    end
+    object Table1Nume_firma: TStringField
+      FieldName = 'Nume_firma'
+      Size = 30
+    end
+    object Table1Fisc: TStringField
+      FieldName = 'Fisc'
+      Size = 15
+    end
+    object Table1J: TStringField
+      FieldName = 'J'
+      Size = 15
+    end
+    object Table1Banca: TIntegerField
+      FieldName = 'Banca'
+    end
+    object Table1Telefon_firma: TIntegerField
+      FieldName = 'Telefon_firma'
+    end
+    object Table1Adresa_firma: TMemoField
+      FieldName = 'Adresa_firma'
+      BlobType = ftMemo
+      Size = 1
+    end
+    object Table1Cod: TStringField
+      FieldName = 'Cod'
+      Size = 15
+    end
+    object Table1Nume: TStringField
+      FieldName = 'Nume'
+      Size = 15
+    end
+    object Table1Prenume: TStringField
+      FieldName = 'Prenume'
+      Size = 15
+    end
+    object Table1CNP: TFloatField
+      FieldName = 'CNP'
+    end
+    object Table1Functia: TStringField
+      FieldName = 'Functia'
+      Size = 15
+    end
+    object Table1Cod_functie: TStringField
+      FieldName = 'Cod_functie'
+      Size = 15
+    end
+    object Table1Sectia: TStringField
+      FieldName = 'Sectia'
+      Size = 15
+    end
+    object Table1Marca: TStringField
+      FieldName = 'Marca'
+      Size = 15
+    end
+    object Table1Sp_vechi: TBooleanField
+      FieldName = 'Sp_vechi'
+    end
+    object Table1Regie: TBooleanField
+      FieldName = 'Regie'
+    end
+    object Table1An: TIntegerField
+      FieldName = 'An'
+    end
+    object Table1Salar_tarifar: TFloatField
+      FieldName = 'Salar_tarifar'
+    end
+    object Table1Salar_ora: TIntegerField
+      FieldName = 'Salar_ora'
+    end
+    object Table1Lucrate: TIntegerField
+      FieldName = 'Lucrate'
+    end
+    object Table1Nelucrate: TIntegerField
+      FieldName = 'Nelucrate'
+    end
+    object Table1Sup_15: TIntegerField
+      FieldName = 'Sup_15'
+    end
+    object Table1Sup_2: TIntegerField
+      FieldName = 'Sup_2'
+    end
+    object Table1Sarb: TIntegerField
+      FieldName = 'Sarb'
+    end
+    object Table1Ore_noapte: TIntegerField
+      FieldName = 'Ore_noapte'
+    end
+    object Table1Ore_nemotivate: TIntegerField
+      FieldName = 'Ore_nemotivate'
+    end
+    object Table1Cfs: TIntegerField
+      FieldName = 'Cfs'
+    end
+    object Table1Ore_acord: TIntegerField
+      FieldName = 'Ore_acord'
+    end
+    object Table1Premiu: TFloatField
+      FieldName = 'Premiu'
+    end
+    object Table1Altele: TFloatField
+      FieldName = 'Altele'
+    end
+    object Table1Dif_diurna: TFloatField
+      FieldName = 'Dif_diurna'
+    end
+    object Table1Regularizare: TFloatField
+      FieldName = 'Regularizare'
+    end
+    object Table1Salar_realizat: TFloatField
+      FieldName = 'Salar_realizat'
+    end
+    object Table1Supl_15: TFloatField
+      FieldName = 'Supl_15'
+    end
+    object Table1Supl_20: TFloatField
+      FieldName = 'Supl_20'
+    end
+    object Table1Sarbatori: TFloatField
+      FieldName = 'Sarbatori'
+    end
+    object Table1Noapte: TFloatField
+      FieldName = 'Noapte'
+    end
+    object Table1V_acord: TFloatField
+      FieldName = 'V_acord'
+    end
+    object Table1Total_s: TFloatField
+      FieldName = 'Total_s'
+    end
+    object Table1Co_z: TIntegerField
+      FieldName = 'Co_z'
+    end
+    object Table1Co_v: TFloatField
+      FieldName = 'Co_v'
+    end
+    object Table1Cm_z: TIntegerField
+      FieldName = 'Cm_z'
+    end
+    object Table1Cm_v: TFloatField
+      FieldName = 'Cm_v'
+    end
+    object Table1Preaviz: TBooleanField
+      FieldName = 'Preaviz'
+    end
+    object Table1Bccas: TFloatField
+      FieldName = 'Bccas'
+    end
+    object Table1Asig: TFloatField
+      FieldName = 'Asig'
+    end
+    object Table1Somaj: TFloatField
+      FieldName = 'Somaj'
+    end
+    object Table1Asig_s: TFloatField
+      FieldName = 'Asig_s'
+    end
+    object Table1C_pro: TFloatField
+      FieldName = 'C_pro'
+    end
+    object Table1V_net: TFloatField
+      FieldName = 'V_net'
+    end
+    object Table1Dedp_b: TFloatField
+      FieldName = 'Dedp_b'
+    end
+    object Table1Ded_sup: TFloatField
+      FieldName = 'Ded_sup'
+    end
+    object Table1Bcal_imp: TFloatField
+      FieldName = 'Bcal_imp'
+    end
+    object Table1Bcalc_impco: TFloatField
+      FieldName = 'Bcalc_impco'
+    end
+    object Table1Impozit_cr: TFloatField
+      FieldName = 'Impozit_cr'
+    end
+    object Table1Imp_co: TFloatField
+      FieldName = 'Imp_co'
+    end
+    object Table1Ajutor_n: TFloatField
+      FieldName = 'Ajutor_n'
+    end
+    object Table1Avans: TFloatField
+      FieldName = 'Avans'
+    end
+    object Table1Indem: TFloatField
+      FieldName = 'Indem'
+    end
+    object Table1Popriri: TFloatField
+      FieldName = 'Popriri'
+    end
+    object Table1Alte_r: TFloatField
+      FieldName = 'Alte_r'
+    end
+    object Table1Gara_m: TFloatField
+      FieldName = 'Gara_m'
+    end
+    object Table1Rest: TFloatField
+      FieldName = 'Rest'
+    end
+    object Table1Dif_imp: TFloatField
+      FieldName = 'Dif_imp'
+    end
+    object Table1Total_p: TFloatField
+      FieldName = 'Total_p'
+    end
+    object Table1Salar_net: TFloatField
+      FieldName = 'Salar_net'
+    end
+    object Table1Co_ramas: TFloatField
+      FieldName = 'Co_ramas'
+    end
+    object Table1Zile_luna: TFloatField
+      FieldName = 'Zile_luna'
+    end
+  end
+end

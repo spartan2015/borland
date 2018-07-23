@@ -1,0 +1,195 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit16H
+#define Unit16H
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <ExtCtrls.hpp>
+#include <QuickRpt.hpp>
+#include <Qrctrls.hpp>
+#include <QRExport.hpp>
+//---------------------------------------------------------------------------
+class Ta3 : public TForm
+{
+__published:	// IDE-managed Components
+        TQuickRep *QuickRep1;
+        TQRBand *QRBand1;
+        TQRLabel *QRLabel1;
+        TQRDBText *QRDBText1;
+        TQRLabel *QRLabel2;
+        TQRLabel *QRLabel5;
+        TQRLabel *QRLabel6;
+        TQRLabel *QRLabel7;
+        TQRDBText *QRDBText5;
+        TQRLabel *QRLabel8;
+        TQRDBText *QRDBText6;
+        TQRLabel *QRLabel9;
+        TQRDBText *QRDBText7;
+        TQRLabel *QRLabel10;
+        TQRDBText *QRDBText8;
+        TQRLabel *QRLabel11;
+        TQRDBText *QRDBText9;
+        TQRDBText *QRDBText11;
+        TQRLabel *QRLabel34;
+        TQRLabel *QRLabel35;
+        TQRDBText *QRDBText18;
+        TQRLabel *QRLabel12;
+        TQRDBText *QRDBText10;
+        TQRLabel *QRLabel13;
+        TQRDBText *QRDBText12;
+        TQRLabel *QRLabel14;
+        TQRDBText *QRDBText13;
+        TQRLabel *QRLabel15;
+        TQRLabel *QRLabel16;
+        TQRLabel *QRLabel17;
+        TQRLabel *QRLabel18;
+        TQRLabel *QRLabel19;
+        TQRLabel *QRLabel20;
+        TQRLabel *QRLabel21;
+        TQRLabel *QRLabel22;
+        TQRLabel *QRLabel23;
+        TQRLabel *QRLabel24;
+        TQRLabel *QRLabel25;
+        TQRLabel *QRLabel26;
+        TQRLabel *QRLabel27;
+        TQRLabel *QRLabel28;
+        TQRLabel *QRLabel29;
+        TQRLabel *QRLabel30;
+        TQRLabel *QRLabel31;
+        TQRLabel *QRLabel32;
+        TQRLabel *QRLabel33;
+        TQRLabel *QRLabel36;
+        TQRLabel *QRLabel37;
+        TQRLabel *QRLabel38;
+        TQRLabel *QRLabel39;
+        TQRLabel *QRLabel40;
+        TQRLabel *QRLabel41;
+        TQRLabel *QRLabel42;
+        TQRLabel *QRLabel43;
+        TQRLabel *QRLabel44;
+        TQRLabel *QRLabel45;
+        TQRLabel *QRLabel46;
+        TQRLabel *QRLabel47;
+        TQRLabel *QRLabel48;
+        TQRLabel *QRLabel49;
+        TQRLabel *QRLabel50;
+        TQRDBText *QRDBText14;
+        TQRLabel *QRLabel51;
+        TQRDBText *QRDBText15;
+        TQRLabel *QRLabel53;
+        TQRLabel *QRLabel54;
+        TQRLabel *QRLabel55;
+        TQRLabel *QRLabel56;
+        TQRLabel *QRLabel57;
+        TQRLabel *QRLabel58;
+        TQRLabel *QRLabel59;
+        TQRLabel *QRLabel60;
+        TQRLabel *QRLabel61;
+        TQRLabel *QRLabel62;
+        TQRLabel *QRLabel63;
+        TQRLabel *QRLabel64;
+        TQRLabel *QRLabel65;
+        TQRLabel *QRLabel66;
+        TQRLabel *QRLabel67;
+        TQRLabel *QRLabel68;
+        TQRLabel *QRLabel69;
+        TQRLabel *QRLabel70;
+        TQRLabel *QRLabel71;
+        TQRLabel *QRLabel72;
+        TQRLabel *QRLabel73;
+        TQRLabel *QRLabel74;
+        TQRLabel *QRLabel75;
+        TQRLabel *QRLabel76;
+        TQRLabel *QRLabel77;
+        TQRLabel *QRLabel78;
+        TQRLabel *QRLabel79;
+        TQRLabel *QRLabel80;
+        TQRLabel *QRLabel81;
+        TQRLabel *QRLabel82;
+        TQRLabel *QRLabel83;
+        TQRLabel *QRLabel84;
+        TQRLabel *QRLabel85;
+        TQRLabel *QRLabel86;
+        TQRLabel *QRLabel87;
+        TQRLabel *QRLabel88;
+        TQRLabel *QRLabel89;
+        TQRLabel *QRLabel90;
+        TQRDBText *QRDBText16;
+        TQRDBText *QRDBText17;
+        TQRDBText *QRDBText19;
+        TQRDBText *QRDBText20;
+        TQRLabel *QRLabel91;
+        TQRLabel *QRLabel92;
+        TQRLabel *QRLabel93;
+        TQRLabel *QRLabel94;
+        TQRLabel *QRLabel95;
+        TQRLabel *QRLabel96;
+        TQRLabel *QRLabel97;
+        TQRLabel *QRLabel98;
+        TQRLabel *QRLabel99;
+        TQRLabel *QRLabel100;
+        TQRLabel *QRLabel101;
+        TQRLabel *QRLabel102;
+        TQRLabel *QRLabel103;
+        TQRLabel *QRLabel104;
+        TQRDBText *QRDBText21;
+        TQRDBText *QRDBText22;
+        TQRDBText *QRDBText2;
+        TQRDBText *QRDBText3;
+        TQRDBText *QRDBText4;
+        TQRDBText *QRDBText23;
+        TQRDBText *QRDBText24;
+        TQRDBText *QRDBText25;
+        TQRDBText *QRDBText26;
+        TQRDBText *QRDBText27;
+        TQRDBText *QRDBText28;
+        TQRDBText *QRDBText29;
+        TQRDBText *QRDBText30;
+        TQRDBText *QRDBText31;
+        TQRDBText *QRDBText32;
+        TQRDBText *QRDBText33;
+        TQRDBText *QRDBText34;
+        TQRDBText *QRDBText35;
+        TQRDBText *QRDBText36;
+        TQRDBText *QRDBText37;
+        TQRLabel *QRLabel3;
+        TQRLabel *QRLabel4;
+        TQRLabel *QRLabel52;
+        TQRLabel *QRLabel105;
+        TQRLabel *QRLabel106;
+        TQRLabel *QRLabel107;
+        TQRLabel *QRLabel108;
+        TQRLabel *QRLabel109;
+        TQRLabel *QRLabel110;
+        TQRLabel *QRLabel111;
+        TQRLabel *QRLabel112;
+        TQRLabel *QRLabel113;
+        TQRLabel *QRLabel114;
+        TQRLabel *QRLabel115;
+        TQRLabel *QRLabel116;
+        TQRLabel *QRLabel117;
+        TQRLabel *QRLabel118;
+        TQRLabel *QRLabel119;
+        TQRLabel *QRLabel120;
+        TQRLabel *QRLabel121;
+        TQRLabel *QRLabel122;
+        TQRLabel *QRLabel123;
+        TQRLabel *QRLabel124;
+        TQRLabel *QRLabel125;
+        TQRLabel *QRLabel126;
+        TQRLabel *QRLabel127;
+        TQRLabel *QRLabel128;
+        TQRLabel *QRLabel129;
+        TQRLabel *QRLabel130;
+        TQRLabel *QRLabel131;
+private:	// User declarations
+public:		// User declarations
+        __fastcall Ta3(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE Ta3 *a3;
+//---------------------------------------------------------------------------
+#endif

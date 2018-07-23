@@ -1,0 +1,38 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit8.h"
+#include "Unit2.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+Tdelegati *delegati;
+//---------------------------------------------------------------------------
+__fastcall Tdelegati::Tdelegati(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tdelegati::Button2Click(TObject *Sender)
+{
+Close();        
+}
+//---------------------------------------------------------------------------
+void __fastcall Tdelegati::Button1Click(TObject *Sender)
+{
+dm->ionume_delegat->AsString=dm->delegatinume_delegat->AsString;
+dm->iobuletin_delegat->AsString=dm->delegatibuletin_delegat->AsString;
+Close();
+}
+//---------------------------------------------------------------------------
+void __fastcall Tdelegati::Edit1Change(TObject *Sender)
+{
+TLocateOptions flags;
+flags <<loCaseInsensitive <<loPartialkey;
+dm->delegati->Locate("nume",Edit1->Text,flags);        
+}
+//---------------------------------------------------------------------------
+

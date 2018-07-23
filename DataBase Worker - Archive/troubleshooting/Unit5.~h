@@ -1,0 +1,90 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit5H
+#define Unit5H
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <Db.hpp>
+#include <DBTables.hpp>
+//---------------------------------------------------------------------------
+class TDM1 : public TDataModule
+{
+__published:	// IDE-managed Components
+        TTable *Table1;
+        TDataSource *DataSource1;
+        TDataSource *DataSource2;
+        TIntegerField *Table1Ln;
+        TFloatField *Table1Cn;
+        TStringField *Table1Nume;
+        TFloatField *Table1Cnp;
+        TIntegerField *Table1Rm;
+        TFloatField *Table1Sbl;
+        TFloatField *Table1Cid;
+        TFloatField *Table1Civ;
+        TFloatField *Table1Cin;
+        TFloatField *Table1Cf;
+        TIntegerField *Table1Cv;
+        TTable *Table2;
+        TIntegerField *Table2Nri;
+        TDateField *Table2Datai;
+        TSmallintField *Table2An;
+        TSmallintField *Table2Ln;
+        TDateField *Table2Datal;
+        TStringField *Table2Den;
+        TFloatField *Table2Cf;
+        TStringField *Table2Rj;
+        TSmallintField *Table2Rn;
+        TSmallintField *Table2Ra;
+        TSmallintField *Table2Nra;
+        TFloatField *Table2Fs;
+        TFloatField *Table2Tcad;
+        TFloatField *Table2Tcav;
+        TFloatField *Table2Tcan;
+        TFloatField *Table2Ded;
+        TFloatField *Table2Tcid;
+        TFloatField *Table2Tciv;
+        TFloatField *Table2Tcin;
+        TFloatField *Table2Totd;
+        TFloatField *Table2Totv;
+        TFloatField *Table2Totn;
+        TFloatField *Table2Obl;
+        TFloatField *Table2Oblna;
+        TFloatField *Table2Oblni;
+        TFloatField *Table2Maj;
+        TFloatField *Table2Pen;
+        TFloatField *Table2Totobl;
+        TStringField *Table2B1;
+        TStringField *Table2F1;
+        TStringField *Table2C1;
+        TStringField *Table2B2;
+        TStringField *Table2F2;
+        TStringField *Table2C2;
+        TStringField *Table2Funca;
+        TStringField *Table2Numea;
+        TDateField *Table2Datad;
+        TSmallintField *Table2Sup;
+        TTable *Table4;
+        TBatchMove *a1;
+        TBatchMove *a2;
+        TFloatField *Table1An;
+        TTable *Table3;
+        TTable *Table5;
+        TTable *Table6;
+        TTable *Table7;
+        TTable *Table8;
+        TBatchMove *b1;
+        TBatchMove *b2;
+        TIntegerField *Table5AN;
+        TIntegerField *Table5LN;
+        TLargeintField *Table5CF;
+private:	// User declarations
+public:		// User declarations
+        __fastcall TDM1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TDM1 *DM1;
+//---------------------------------------------------------------------------
+#endif

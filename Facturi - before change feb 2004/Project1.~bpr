@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.05.03"/>
+    <PROJECT value="Project1.exe"/>
+    <OBJFILES value="Project1.obj Unit1.obj Unit2.obj Unit3.obj Unit4.obj Unit5.obj Unit6.obj 
+      Unit7.obj Unit8.obj Unit9.obj Unit10.obj Unit11.obj Unit12.obj Unit13.obj 
+      Unit14.obj Unit15splash.obj Unit15.obj Unit16.obj Unit17.obj Unit18.obj 
+      Unit19.obj Unit20.obj Unit21.obj Unit22.obj Unit23.obj Unit24.obj Unit25.obj"/>
+    <RESFILES value="Project1.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Unit1.dfm Unit2.dfm Unit3.dfm Unit4.dfm Unit5.dfm Unit6.dfm 
+      Unit7.dfm Unit8.dfm Unit9.dfm Unit10.dfm Unit11.dfm Unit12.dfm Unit13.dfm 
+      Unit14.dfm Unit15splash.dfm Unit15.dfm Unit16.dfm Unit17.dfm Unit18.dfm 
+      Unit19.dfm Unit20.dfm Unit21.dfm Unit22.dfm Unit23.dfm Unit24.dfm Unit25.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="VCL50.lib VCLDB50.lib VCLBDE50.lib QRPT50.lib vclx50.lib"/>
+    <PACKAGES value="VCL50.bpi VCLX50.bpi bcbsmp50.bpi VCLDB50.bpi VCLADO50.bpi ibsmp50.bpi 
+      VCLBDE50.bpi VCLDBX50.bpi QRPT50.bpi TEEUI50.bpi TEEDB50.bpi TEE50.bpi 
+      DSS50.bpi TEEQR50.bpi VCLIB50.bpi VCLMID50.bpi VCLIE50.bpi INETDB50.bpi 
+      INET50.bpi NMFAST50.bpi WEBMID50.bpi bcbie50.bpi dclocx50.bpi 
+      bcb2kaxserver50.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="tlink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="Project1.cpp"/>
+    <INCLUDEPATH value="D:\;R\;ER\;TER;UTER;PUTER;MPUTER;OMPUTER;COMPUTER;D:\COMPUTER;S\COMPUTER;NS\COMPUTER;ONS\COMPUTER;CONS\COMPUTER;ICONS\COMPUTER;D:\ICONS\COMPUTER;S\ICONS\COMPUTER;CS\ICONS\COMPUTER;ICS\ICONS\COMPUTER;HICS\ICONS\COMPUTER;PHICS\ICONS\COMPUTER;APHICS\ICONS\COMPUTER;RAPHICS\ICONS\COMPUTER;GRAPHICS\ICONS\COMPUTER;D:\GRAPHICS\ICONS\COMPUTER;E\GRAPHICS\ICONS\COMPUTER;GE\GRAPHICS\ICONS\COMPUTER;AGE\GRAPHICS\ICONS\COMPUTER;MAGE\GRAPHICS\ICONS\COMPUTER;IMAGE\GRAPHICS\ICONS\COMPUTER;:\IMAGE\GRAPHICS\ICONS\COMPUTER;D:\IMAGE\GRAPHICS\ICONS\COMPUTER;D:\CBuilder5\Projects\;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="D:\;R\;ER\;TER;UTER;PUTER;MPUTER;OMPUTER;COMPUTER;D:\COMPUTER;S\COMPUTER;NS\COMPUTER;ONS\COMPUTER;CONS\COMPUTER;ICONS\COMPUTER;D:\ICONS\COMPUTER;S\ICONS\COMPUTER;CS\ICONS\COMPUTER;ICS\ICONS\COMPUTER;HICS\ICONS\COMPUTER;PHICS\ICONS\COMPUTER;APHICS\ICONS\COMPUTER;RAPHICS\ICONS\COMPUTER;GRAPHICS\ICONS\COMPUTER;D:\GRAPHICS\ICONS\COMPUTER;E\GRAPHICS\ICONS\COMPUTER;GE\GRAPHICS\ICONS\COMPUTER;AGE\GRAPHICS\ICONS\COMPUTER;MAGE\GRAPHICS\ICONS\COMPUTER;IMAGE\GRAPHICS\ICONS\COMPUTER;:\IMAGE\GRAPHICS\ICONS\COMPUTER;D:\IMAGE\GRAPHICS\ICONS\COMPUTER;D:\CBuilder5\Projects\;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-ID:\. -IR\. -IER\. -ITER -IUTER -IPUTER -IMPUTER -IOMPUTER -ICOMPUTER 
+      -ID:\COMPUTER -IS\COMPUTER -INS\COMPUTER -IONS\COMPUTER -ICONS\COMPUTER 
+      -IICONS\COMPUTER -ID:\ICONS\COMPUTER -IS\ICONS\COMPUTER 
+      -ICS\ICONS\COMPUTER -IICS\ICONS\COMPUTER -IHICS\ICONS\COMPUTER 
+      -IPHICS\ICONS\COMPUTER -IAPHICS\ICONS\COMPUTER -IRAPHICS\ICONS\COMPUTER 
+      -IGRAPHICS\ICONS\COMPUTER -ID:\GRAPHICS\ICONS\COMPUTER 
+      -IE\GRAPHICS\ICONS\COMPUTER -IGE\GRAPHICS\ICONS\COMPUTER 
+      -IAGE\GRAPHICS\ICONS\COMPUTER -IMAGE\GRAPHICS\ICONS\COMPUTER 
+      -IIMAGE\GRAPHICS\ICONS\COMPUTER -I:\IMAGE\GRAPHICS\ICONS\COMPUTER 
+      -ID:\IMAGE\GRAPHICS\ICONS\COMPUTER -ID:\CBuilder5\Projects\. 
+      -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
+    <CFLAG1 value="-vGc -vGt -vGd -O2 -H=$(BCB)\lib\vcl50.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k 
+      -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-$YD -$W -$O- -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="cg32.lib $(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+  </LINKER>
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=1
+MinorVer=2
+Release=1
+Build=1
+Debug=1
+PreRelease=1
+Special=1
+Private=1
+DLL=0
+Locale=1048
+CodePage=1250
+
+[Version Info Keys]
+CompanyName=NEO Trading LTD
+FileDescription=Facturi - debug build
+FileVersion=1.2.1.1
+InternalName=Facturi - Module 3
+LegalCopyright=Yes
+LegalTrademarks=NEO Application Quad Series
+OriginalFilename=Facturi
+ProductName=NEO Application - Facturi
+ProductVersion=1.0.0.0
+Comments=Special build - debug mode
+SpecialBuild=debug release
+PrivateBuild=trial
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=1
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

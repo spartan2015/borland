@@ -1,0 +1,93 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit13H
+#define Unit13H
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <DBCGrids.hpp>
+#include <ActnList.hpp>
+#include <DBCtrls.hpp>
+#include <DBGrids.hpp>
+#include <ExtCtrls.hpp>
+#include <Grids.hpp>
+#include <Mask.hpp>
+#include <Menus.hpp>
+//---------------------------------------------------------------------------
+class Tcasabanca : public TForm
+{
+__published:	// IDE-managed Components
+        TButton *Button1;
+        TDBGrid *DBGrid1;
+        TDBNavigator *DBNavigator1;
+        TDBEdit *DBEdit1;
+        TDBEdit *DBEdit2;
+        TDBEdit *DBEdit3;
+        TDBEdit *DBEdit4;
+        TDBEdit *DBEdit7;
+        TDBMemo *DBMemo1;
+        TActionList *ActionList1;
+        TMainMenu *MainMenu1;
+        TLabel *Label1;
+        TLabel *Label2;
+        TLabel *Label3;
+        TLabel *Label4;
+        TLabel *Label7;
+        TLabel *Label8;
+        TMenuItem *Optiuni;
+        TMenuItem *Nou1;
+        TMenuItem *Sterge1;
+        TMenuItem *Salveaza1;
+        TLabel *Label9;
+        TComboBox *ComboBox1;
+        TLabel *Label10;
+        TEdit *Edit1;
+        TButton *Button2;
+        TButton *Button3;
+        TButton *Button4;
+        TAction *Action1nou;
+        TAction *Action2sterge;
+        TAction *Action1salveaza;
+        TAction *Action1inapoi;
+        TAction *inapoi;
+        TDBCheckBox *DBCheckBox1;
+        TLabel *Label11;
+        TDBEdit *DBEdit8;
+        TButton *Button5;
+        TBevel *Bevel1;
+        TCheckBox *CheckBox1;
+        TRadioGroup *RadioGroup1;
+        TLabel *Label5;
+        TLabel *Label12;
+        TLabel *Label13;
+        TDBEdit *DBEdit5;
+        TDBEdit *DBEdit6;
+        TLabel *Label14;
+        TDBEdit *DBEdit9;
+        TDBEdit *DBEdit10;
+        TLabel *Label15;
+        TDBComboBox *DBComboBox1;
+        TButton *Button6;
+        TButton *Button7;
+        void __fastcall Action1nouExecute(TObject *Sender);
+        void __fastcall Action2stergeExecute(TObject *Sender);
+        void __fastcall Action1salveazaExecute(TObject *Sender);
+        void __fastcall inapoiExecute(TObject *Sender);
+        void __fastcall Edit1Change(TObject *Sender);
+        void __fastcall Button5Click(TObject *Sender);
+        void __fastcall CheckBox1Click(TObject *Sender);
+        void __fastcall RadioGroup1Click(TObject *Sender);
+        void __fastcall DBComboBox1Change(TObject *Sender);
+        void __fastcall Button6Click(TObject *Sender);
+        void __fastcall DBEdit6Exit(TObject *Sender);
+        void __fastcall Button7Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+        __fastcall Tcasabanca(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE Tcasabanca *casabanca;
+//---------------------------------------------------------------------------
+#endif

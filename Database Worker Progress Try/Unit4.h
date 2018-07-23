@@ -1,0 +1,172 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit4H
+#define Unit4H
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <Db.hpp>
+#include <DBTables.hpp>
+#include <ExtCtrls.hpp>
+#include <Qrctrls.hpp>
+#include <QuickRpt.hpp>
+//---------------------------------------------------------------------------
+class TForm4 : public TForm
+{
+__published:	// IDE-managed Components
+        TQuickRep *QuickRep1;
+        TDataSource *DataSource1;
+        TTable *Table1;
+        TQRBand *QRBand1;
+        TQRBand *QRBand2;
+        TQRGroup *QRGroup1;
+        TQRBand *QRBand3;
+        TQRBand *QRBand4;
+        TQRLabel *QRLabel1;
+        TQRDBText *QRDBText1;
+        TQRDBText *QRDBText2;
+        TQRDBText *QRDBText3;
+        TQRLabel *QRLabel2;
+        TQRLabel *QRLabel3;
+        TQRLabel *QRLabel4;
+        TQRDBText *QRDBText4;
+        TQRLabel *QRLabel5;
+        TQRDBText *QRDBText5;
+        TQRLabel *QRLabel6;
+        TQRLabel *QRLabel7;
+        TQRDBText *QRDBText6;
+        TQRDBText *QRDBText7;
+        TQRLabel *QRLabel8;
+        TQRLabel *QRLabel9;
+        TQRLabel *QRLabel10;
+        TQRLabel *QRLabel11;
+        TQRLabel *QRLabel12;
+        TQRLabel *QRLabel13;
+        TQRLabel *QRLabel14;
+        TQRLabel *QRLabel15;
+        TQRLabel *QRLabel16;
+        TQRLabel *QRLabel17;
+        TQRLabel *QRLabel18;
+        TQRDBText *QRDBText8;
+        TQRDBText *QRDBText9;
+        TQRDBText *QRDBText10;
+        TQRDBText *QRDBText11;
+        TQRDBText *QRDBText12;
+        TQRDBText *QRDBText13;
+        TQRDBText *QRDBText14;
+        TQRDBText *QRDBText15;
+        TQRDBText *QRDBText16;
+        TQRDBText *QRDBText17;
+        TQRDBText *QRDBText18;
+        TQRExpr *QRExpr1;
+        TQRSysData *QRSysData1;
+        TQRSysData *QRSysData2;
+        TQRSysData *QRSysData3;
+        TQRLabel *QRLabel19;
+        TQRDBText *QRDBText19;
+        TQRLabel *QRLabel20;
+        TQRLabel *QRLabel21;
+        TQRDBText *QRDBText20;
+        TQRDBText *QRDBText21;
+        TStringField *Table1Nume_firma;
+        TStringField *Table1Fisc;
+        TStringField *Table1J;
+        TStringField *Table1Banca;
+        TStringField *Table1Cod_banca;
+        TFloatField *Table1Telefon_firma;
+        TMemoField *Table1Adresa_firma;
+        TStringField *Table1Nume;
+        TStringField *Table1Prenume;
+        TStringField *Table1Cod;
+        TFloatField *Table1Cnp;
+        TStringField *Table1Functie;
+        TStringField *Table1Cod_functie;
+        TStringField *Table1Sectia;
+        TStringField *Table1Marca;
+        TDateField *Table1Data_angajare;
+        TFloatField *Table1Salar_tarifar;
+        TFloatField *Table1Prima;
+        TDateField *Table1Data_prima_angajare;
+        TIntegerField *Table1Vechime;
+        TBooleanField *Table1Spor_vechime;
+        TBooleanField *Table1Regie;
+        TStringField *Table1Sex;
+        TStringField *Table1Stare_civila;
+        TFloatField *Table1Telefon;
+        TMemoField *Table1Adresa;
+        TDateField *Table1Data_nastere;
+        TBooleanField *Table1Stagiu_militar;
+        TStringField *Table1Livret_militar;
+        TMemoField *Table1Studii;
+        TIntegerField *Table1Numar_copii;
+        TMemoField *Table1Date_copii;
+        TBooleanField *Table1Pers_handicapate_grI;
+        TBooleanField *Table1Pers_handicapate_grII;
+        TBooleanField *Table1Sotie_in_intretinere;
+        TIntegerField *Table1Concediu_pe_an;
+        TIntegerField *Table1An;
+        TStringField *Table1Luna;
+        TFloatField *Table1Salar_ora;
+        TIntegerField *Table1Zile_lucrate;
+        TIntegerField *Table1Zile_nelucrate;
+        TIntegerField *Table1Ore_suplimentare_15;
+        TIntegerField *Table1Ore_suplimentare_2;
+        TIntegerField *Table1Ore_in_sarbatori;
+        TIntegerField *Table1Ore_noapte;
+        TIntegerField *Table1Ore_nemotivate;
+        TIntegerField *Table1Cfs;
+        TIntegerField *Table1Ore_in_acord;
+        TFloatField *Table1Premiu;
+        TFloatField *Table1Alti_bani;
+        TFloatField *Table1Diferenta_diurna;
+        TFloatField *Table1Regularizare;
+        TFloatField *Table1Salar_realizat;
+        TFloatField *Table1Suplimentar_15;
+        TFloatField *Table1Suplimentar_2;
+        TFloatField *Table1Sarbatori;
+        TFloatField *Table1Noapte;
+        TFloatField *Table1Spor_vechime_val;
+        TFloatField *Table1Valoare_acord;
+        TFloatField *Table1Salar_brut;
+        TIntegerField *Table1Zile_concediu_O;
+        TFloatField *Table1Valoare_concediu_O;
+        TIntegerField *Table1Zile_concediu_M;
+        TFloatField *Table1Valoare_concediu_M;
+        TBooleanField *Table1Preaviz;
+        TFloatField *Table1Baza_calcul_CAS;
+        TFloatField *Table1Cas;
+        TFloatField *Table1Cas_firma;
+        TFloatField *Table1Somaj;
+        TFloatField *Table1Somaj_firma;
+        TFloatField *Table1Sanatate;
+        TFloatField *Table1Sanatate_firma;
+        TFloatField *Table1Cheltuieli_profesionale;
+        TFloatField *Table1Venit_net;
+        TFloatField *Table1Deducere_pers_de_baza;
+        TFloatField *Table1Deducere_suplimentara;
+        TFloatField *Table1Baza_calcul_impozit;
+        TFloatField *Table1Baza_calcul_impozit_CO;
+        TFloatField *Table1Impozit;
+        TFloatField *Table1Impozit_concediu_O;
+        TFloatField *Table1Ajutor_nastere;
+        TFloatField *Table1Avans;
+        TFloatField *Table1Indemnizatii;
+        TFloatField *Table1Popriri;
+        TFloatField *Table1Alte_rate;
+        TFloatField *Table1Garantii_materiale;
+        TFloatField *Table1Rest_plata;
+        TFloatField *Table1Diferenta_impozit;
+        TFloatField *Table1Salar_net;
+        TFloatField *Table1Total_plata;
+        TIntegerField *Table1Concediu_ramas;
+        TIntegerField *Table1Zile_luna;
+private:	// User declarations
+public:		// User declarations
+        __fastcall TForm4(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm4 *Form4;
+//---------------------------------------------------------------------------
+#endif

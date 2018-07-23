@@ -1,0 +1,87 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+USEFORM("Unit1.cpp", Main);
+USEFORM("Unit2.cpp", dm); /* TDataModule: File Type */
+USEFORM("Unit3.cpp", Depozit);
+USEFORM("Unit4.cpp", bios);
+USEFORM("Unit5.cpp", factura);
+USEFORM("Unit6.cpp", raport_factura);
+USEFORM("Unit7.cpp", firme);
+USEFORM("Unit8.cpp", delegati);
+USEFORM("Unit9.cpp", msgmagazie);
+USEFORM("Unit10.cpp", magazie);
+USEFORM("Unit11.cpp", notareceptie);
+USEFORM("Unit12.cpp", fisamagazie);
+USEFORM("Unit13.cpp", casabanca);
+USEFORM("Unit14.cpp", seeker);
+USEFORM("Unit15splash.cpp", splash);
+USEFORM("Unit15.cpp", mesajcasabanca);
+USEFORM("Unit16.cpp", registrucasa);
+USEFORM("Unit17.cpp", raportcasalei);
+USEFORM("Unit18.cpp", raportcomplet);
+USEFORM("Unit19.cpp", solder);
+USEFORM("Unit20.cpp", moneda);
+USEFORM("Unit21.cpp", casabancalei);
+USEFORM("Unit22.cpp", registrucasalei);
+USEFORM("Unit23.cpp", banca);
+USEFORM("Unit24.cpp", raport_banca_lei);
+USEFORM("Unit25.cpp", raport_banca_valuta);
+USEFORM("Unit26.cpp", platafactura);
+USEFORM("Unit27.cpp", biosvaluta);
+USEFORM("D:\IMAGE\GRAPHICS\BMPS\Unit29.cpp", raport_factura_valuta);
+USEFORM("Unit28.cpp", cproduse);
+USEFORM("Unit30.cpp", cservicii);
+//---------------------------------------------------------------------------
+#include "Unit15splash.h"
+WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
+{
+        try
+        {
+       splash = new Tsplash(Application);
+       splash->Show();
+       splash->Update();
+                 Application->Initialize();
+                 Application->Title = "Facturi - NEO Applicationa Quad Series";
+                 Application->CreateForm(__classid(TMain), &Main);
+                 Application->CreateForm(__classid(Tdm), &dm);
+                 Application->CreateForm(__classid(TDepozit), &Depozit);
+                 Application->CreateForm(__classid(Tbios), &bios);
+                 Application->CreateForm(__classid(Tfactura), &factura);
+                 Application->CreateForm(__classid(Traport_factura), &raport_factura);
+                 Application->CreateForm(__classid(Tfirme), &firme);
+                 Application->CreateForm(__classid(Tdelegati), &delegati);
+                 Application->CreateForm(__classid(Tmsgmagazie), &msgmagazie);
+                 Application->CreateForm(__classid(Tmagazie), &magazie);
+                 Application->CreateForm(__classid(Tnotareceptie), &notareceptie);
+                 Application->CreateForm(__classid(Tfisamagazie), &fisamagazie);
+                 Application->CreateForm(__classid(Tcasabanca), &casabanca);
+                 Application->CreateForm(__classid(Tseeker), &seeker);
+                 Application->CreateForm(__classid(Tmesajcasabanca), &mesajcasabanca);
+                 Application->CreateForm(__classid(Tregistrucasa), &registrucasa);
+                 Application->CreateForm(__classid(Traportcasalei), &raportcasalei);
+                 Application->CreateForm(__classid(Traportcomplet), &raportcomplet);
+                 Application->CreateForm(__classid(Tsolder), &solder);
+                 Application->CreateForm(__classid(Tmoneda), &moneda);
+                 Application->CreateForm(__classid(Tcasabancalei), &casabancalei);
+                 Application->CreateForm(__classid(Tregistrucasalei), &registrucasalei);
+                 Application->CreateForm(__classid(Tbanca), &banca);
+                 Application->CreateForm(__classid(Traport_banca_lei), &raport_banca_lei);
+                 Application->CreateForm(__classid(Traport_banca_valuta), &raport_banca_valuta);
+                 Application->CreateForm(__classid(Tplatafactura), &platafactura);
+                 Application->CreateForm(__classid(Tbiosvaluta), &biosvaluta);
+                 Application->CreateForm(__classid(Traport_factura_valuta), &raport_factura_valuta);
+                 Application->CreateForm(__classid(Tcproduse), &cproduse);
+                 Application->CreateForm(__classid(Tcservicii), &cservicii);
+                 splash->Hide();
+                 splash->Close();
+                 Application->Run();
+        }
+        catch (Exception &exception)
+        {
+                 Application->ShowException(&exception);
+        }
+        return 0;
+}
+//---------------------------------------------------------------------------

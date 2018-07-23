@@ -1,0 +1,35 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include <iostream.h>
+#include <stdio.h>
+#include <fstream.h>
+#include <stdlib.h>
+
+//---------------------------------------------------------------------------
+
+#pragma argsused
+int main(int argc, char* argv[])
+{
+if (argc<2) {cout << "Parameters input error\n" << "Example: [ program.exe <fisier> ]"; return 1;}
+fstream inout(argv[1], ios::in | ios::out | ios::binary);
+if (!inout) { cout << "Error opening file!"; return 1; }
+char c1,c2;
+int i;
+for (i=0; i<4; i++) {
+        inout.seekg(i,ios::beg);
+        inout.get(c1);
+        inout.seekg(i,ios::end);
+        inout.get(c2);
+        cout << i << " " <<c1<< "&"<< c2 <<endl;
+
+//        inout.seekp(i,ios::beg);
+//        inout.put(c2);
+//        inout.seekp(i,ios::end);
+//        inout.put(c1);
+        }
+inout.close();
+        return 0;
+}
+//---------------------------------------------------------------------------

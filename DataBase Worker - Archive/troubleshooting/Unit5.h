@@ -1,0 +1,159 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit5H
+#define Unit5H
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <Db.hpp>
+#include <DBTables.hpp>
+//---------------------------------------------------------------------------
+class TDM1 : public TDataModule
+{
+__published:	// IDE-managed Components
+        TTable *Table1;
+        TDataSource *DataSource1;
+        TDataSource *DataSource2;
+        TIntegerField *Table1Ln;
+        TFloatField *Table1Cn;
+        TStringField *Table1Nume;
+        TFloatField *Table1Cnp;
+        TIntegerField *Table1Rm;
+        TFloatField *Table1Sbl;
+        TFloatField *Table1Cid;
+        TFloatField *Table1Civ;
+        TFloatField *Table1Cin;
+        TFloatField *Table1Cf;
+        TIntegerField *Table1Cv;
+        TTable *Table2;
+        TIntegerField *Table2Nri;
+        TDateField *Table2Datai;
+        TSmallintField *Table2An;
+        TSmallintField *Table2Ln;
+        TDateField *Table2Datal;
+        TStringField *Table2Den;
+        TFloatField *Table2Cf;
+        TStringField *Table2Rj;
+        TSmallintField *Table2Rn;
+        TSmallintField *Table2Ra;
+        TSmallintField *Table2Nra;
+        TFloatField *Table2Fs;
+        TFloatField *Table2Tcad;
+        TFloatField *Table2Tcav;
+        TFloatField *Table2Tcan;
+        TFloatField *Table2Ded;
+        TFloatField *Table2Tcid;
+        TFloatField *Table2Tciv;
+        TFloatField *Table2Tcin;
+        TFloatField *Table2Totd;
+        TFloatField *Table2Totv;
+        TFloatField *Table2Totn;
+        TFloatField *Table2Obl;
+        TFloatField *Table2Oblna;
+        TFloatField *Table2Oblni;
+        TFloatField *Table2Maj;
+        TFloatField *Table2Pen;
+        TFloatField *Table2Totobl;
+        TStringField *Table2B1;
+        TStringField *Table2F1;
+        TStringField *Table2C1;
+        TStringField *Table2B2;
+        TStringField *Table2F2;
+        TStringField *Table2C2;
+        TStringField *Table2Funca;
+        TStringField *Table2Numea;
+        TDateField *Table2Datad;
+        TSmallintField *Table2Sup;
+        TTable *Table4;
+        TBatchMove *a1;
+        TBatchMove *a2;
+        TFloatField *Table1An;
+        TTable *Table3;
+        TTable *Table5;
+        TTable *Table6;
+        TTable *Table7;
+        TTable *Table8;
+        TBatchMove *b1;
+        TBatchMove *b2;
+        TIntegerField *Table5AN;
+        TIntegerField *Table5LN;
+        TFloatField *Table5CF;
+        TStringField *Table5RJ;
+        TIntegerField *Table5RN;
+        TIntegerField *Table5RA;
+        TStringField *Table5NUME;
+        TFloatField *Table5CNP;
+        TIntegerField *Table5CM;
+        TIntegerField *Table5CV;
+        TIntegerField *Table5PE;
+        TIntegerField *Table5SOM;
+        TIntegerField *Table5TT;
+        TIntegerField *Table5NN;
+        TIntegerField *Table5DD;
+        TIntegerField *Table5SS;
+        TIntegerField *Table5PP;
+        TFloatField *Table5TV;
+        TFloatField *Table5TVN;
+        TFloatField *Table5TVD;
+        TFloatField *Table5TVS;
+        TFloatField *Table5CASAT;
+        TFloatField *Table5CASTOT;
+        TFloatField *Table5BASS;
+        TFloatField *Table5CNPA;
+        TIntegerField *Table5NORMA;
+        TIntegerField *Table6AN;
+        TIntegerField *Table6LN;
+        TIntegerField *Table6DCZZ;
+        TIntegerField *Table6DCLL;
+        TIntegerField *Table6DCAA;
+        TStringField *Table6DEN;
+        TFloatField *Table6CF;
+        TStringField *Table6RJ;
+        TIntegerField *Table6RN;
+        TIntegerField *Table6RA;
+        TIntegerField *Table6NRM;
+        TFloatField *Table6FS;
+        TFloatField *Table6FSN;
+        TFloatField *Table6FSD;
+        TFloatField *Table6FSS;
+        TFloatField *Table6CASS;
+        TFloatField *Table6CASAN;
+        TFloatField *Table6BASS;
+        TFloatField *Table6CAS145;
+        TFloatField *Table6CASVIR;
+        TIntegerField *Table6NRF;
+        TStringField *Table6B1;
+        TStringField *Table6F1;
+        TStringField *Table6C1;
+        TStringField *Table6B2;
+        TStringField *Table6F2;
+        TStringField *Table6C2;
+        TStringField *Table6B3;
+        TStringField *Table6F3;
+        TStringField *Table6C3;
+        TStringField *Table6B4;
+        TStringField *Table6F4;
+        TStringField *Table6C4;
+        TFloatField *Table6CNPA;
+        TFloatField *Table6CAAMBP;
+        TStringField *Table6A_LOCA;
+        TStringField *Table6A_STR;
+        TIntegerField *Table6A_NR;
+        TStringField *Table6A_BL;
+        TStringField *Table6A_SC;
+        TIntegerField *Table6A_ET;
+        TIntegerField *Table6A_AP;
+        TFloatField *Table6TELEFON;
+        TStringField *Table6A_JUD;
+        TStringField *Table6A_SECT;
+        TStringField *Table6E_MAIL;
+private:	// User declarations
+public:		// User declarations
+        __fastcall TDM1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TDM1 *DM1;
+//---------------------------------------------------------------------------
+#endif

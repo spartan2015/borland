@@ -1,0 +1,211 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit2H
+#define Unit2H
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <Db.hpp>
+#include <DBTables.hpp>
+//---------------------------------------------------------------------------
+class Tdm : public TDataModule
+{
+__published:	// IDE-managed Components
+        TDataSource *DataSource1;
+        TTable *Table1;
+        TDataSource *DataSource2;
+        TTable *Table2;
+        TIntegerField *Table2an;
+        TStringField *Table2luna;
+        TStringField *Table1Nume_firma;
+        TFloatField *Table1Fisc;
+        TStringField *Table1J;
+        TStringField *Table1Banca_1;
+        TStringField *Table1Filiala_1;
+        TStringField *Table1Cont_banca_1;
+        TStringField *Table1Banca_2;
+        TStringField *Table1Filiala_2;
+        TStringField *Table1Cont_banca_2;
+        TFloatField *Table1Telefon_firma;
+        TMemoField *Table1Adresa_firma;
+        TStringField *Table1e_mail_firma;
+        TStringField *Table1Functia_pers_raport;
+        TStringField *Table1Nume_pers_raport;
+        TFloatField *Table1Cnp_angajator;
+        TDataSource *DataSource3;
+        TDataSource *DataSource5;
+        TDataSource *DataSource4;
+        TTable *firme;
+        TDataSource *DataSource6;
+        TTable *delegati;
+        TStringField *firmenume_firma;
+        TStringField *firmej;
+        TStringField *firmefisc;
+        TStringField *firmebanca;
+        TStringField *firmefiliala;
+        TStringField *firmecont_banca;
+        TMemoField *firmeadresa;
+        TFloatField *firmetelefon;
+        TStringField *firmeemail;
+        TFloatField *firmecapital_social;
+        TStringField *delegatinume_delegat;
+        TStringField *delegatibuletin_delegat;
+        TDataSource *DataSource7;
+        TTable *magazie;
+        TStringField *magazieDenumire;
+        TFloatField *magaziepret_unitar;
+        TFloatField *magazievaloarea;
+        TFloatField *magazietva;
+        TStringField *magaziecont;
+        TStringField *magazienume_firma;
+        TStringField *magaziej;
+        TStringField *magaziefisc;
+        TIntegerField *magazienr_factura;
+        TDateField *magaziedata_factura;
+        TStringField *magazielegatura;
+        TStringField *magazietip;
+        TTable *in;
+        TStringField *inDenumire;
+        TStringField *inunitatea;
+        TIntegerField *incantitate;
+        TFloatField *inpret_unitar;
+        TFloatField *invaloarea;
+        TFloatField *intva;
+        TStringField *incont;
+        TStringField *magazieunitatea;
+        TIntegerField *magazieintrare;
+        TIntegerField *magazieiesire;
+        TIntegerField *magaziestoc;
+        TTable *stoc;
+        TStringField *stocDenumire;
+        TIntegerField *stocintrare;
+        TIntegerField *stociesire;
+        TIntegerField *stocstoc;
+        TStringField *stoccont;
+        TStringField *stocunitatea;
+        TTable *Source;
+        TStringField *SourceDenumire;
+        TIntegerField *Sourceintrare;
+        TIntegerField *Sourceiesire;
+        TIntegerField *Sourcestoc;
+        TStringField *Sourcecont;
+        TStringField *Sourceunitatea;
+        TBatchMove *batch1;
+        TDataSource *DataSource8;
+        TFloatField *Table1capital_social;
+        TDataSource *DataSource9;
+        TTable *plativaluta;
+        TIntegerField *plativalutatrick;
+        TIntegerField *plativalutanr_factura;
+        TStringField *plativalutaio;
+        TStringField *plativalutatip;
+        TStringField *plativalutanr_act_achitare;
+        TStringField *plativalutamoneda;
+        TFloatField *plativalutaintrare;
+        TFloatField *plativalutaiesire;
+        TFloatField *plativalutacurs_valutar;
+        TFloatField *plativalutavaluta_intrare;
+        TFloatField *plativalutavaluta_iesire;
+        TTable *cb;
+        TStringField *cbnr_act;
+        TIntegerField *cbnr_anexa;
+        TDateField *cbdata;
+        TStringField *cbexplicatia;
+        TStringField *cbtip;
+        TStringField *cbio;
+        TFloatField *cbcurs_valutar;
+        TFloatField *cbintrare;
+        TFloatField *cbiesire;
+        TMemoField *cbfacturi_achitate;
+        TBooleanField *cbchecked;
+        TStringField *cbcont;
+        TBooleanField *cbstand_by;
+        TStringField *cbcatre;
+        TFloatField *cbvaluta_intrare;
+        TFloatField *cbvaluta_iesire;
+        TBooleanField *cbsoldbool;
+        TFloatField *cbsold_lei;
+        TFloatField *cbsold_valuta;
+        TDataSource *DataSource10;
+        TTable *casa;
+        TStringField *casamoneda;
+        TDataSource *DataSource11;
+        TTable *casalei;
+        TStringField *casaleinr_act;
+        TIntegerField *casaleinr_anexa;
+        TDateField *casaleidata;
+        TStringField *casaleiexplicatia;
+        TStringField *casaleitip;
+        TStringField *casaleiio;
+        TFloatField *casaleiintrare;
+        TFloatField *casaleiiesire;
+        TMemoField *casaleifacturi_achitate;
+        TBooleanField *casaleichecked;
+        TStringField *casaleicont;
+        TBooleanField *casaleistand_by;
+        TStringField *casaleicatre;
+        TBooleanField *casaleisoldbool;
+        TFloatField *casaleisold_lei;
+        TDataSource *DataSource12;
+        TTable *banca;
+        TStringField *bancabanca;
+        TStringField *bancamoneda;
+        TStringField *bancacont;
+        TStringField *bancalegatura;
+        TFloatField *casaleisuma_intrare_disponibila;
+        TFloatField *casaleisuma_iesire_disponibila;
+        TFloatField *cbsuma_intrare_disponibila;
+        TFloatField *cbsuma_iesire_disponibila;
+        TTable *io;
+        TStringField *ionume_firma;
+        TStringField *ioj;
+        TStringField *iofisc;
+        TStringField *iobanca;
+        TStringField *iofiliala;
+        TStringField *iocont_banca;
+        TMemoField *ioadresa;
+        TFloatField *iotelefon;
+        TStringField *ioemail;
+        TIntegerField *ionr_factura;
+        TDateField *iodata_factura;
+        TIntegerField *ionr_aviz_marfa;
+        TStringField *ionume_pers_intocmire;
+        TStringField *iobuletin_pers_intocmire;
+        TFloatField *iocnp_pers_intocmire;
+        TStringField *ionume_delegat;
+        TStringField *iobuletin_delegat;
+        TStringField *iomijloc_transport;
+        TStringField *ionr_transport;
+        TDateField *iodata_expediere;
+        TFloatField *iototal_valoare;
+        TFloatField *iototal_tva;
+        TFloatField *iototal_plata;
+        TStringField *iolegatura;
+        TFloatField *iocapital_social;
+        TDateField *iotermen_plata;
+        TBooleanField *iob;
+        TBooleanField *ioc;
+        TFloatField *iosuma_achitata;
+        TBooleanField *ioachitare_totala;
+        TBooleanField *ioachitare_partiala;
+        TDataSource *DataSource13;
+        TTable *platilei;
+        TIntegerField *platileitrick;
+        TIntegerField *platileinr_factura;
+        TStringField *platileitip;
+        TStringField *platileinr_act_achitare;
+        TFloatField *platileiintrare;
+        TFloatField *platileiiesire;
+        TIntegerField *innr_factura;
+        TIntegerField *intrick;
+        void __fastcall DataModuleCreate(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+        __fastcall Tdm(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE Tdm *dm;
+//---------------------------------------------------------------------------
+#endif

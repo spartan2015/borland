@@ -1,0 +1,118 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit2H
+#define Unit2H
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <Db.hpp>
+#include <DBTables.hpp>
+#include <DB.hpp>
+//---------------------------------------------------------------------------
+class Tdm1 : public TDataModule
+{
+__published:	// IDE-managed Components
+        TDataSource *DataSource1;
+        TTable *Table1;
+        TDataSource *DataSource2;
+        TTable *Table2;
+        TDataSource *DataSource3;
+        TTable *Table3;
+        TIntegerField *Table1an;
+        TStringField *Table1luna;
+        TIntegerField *Table2Nr_crt;
+        TDateField *Table2Data_inregistrare;
+        TStringField *Table2Explicatii;
+        TStringField *Table2Simbol_debit;
+        TStringField *Table2Simbol_credit;
+        TFloatField *Table2Sume_debit;
+        TFloatField *Table2Sume_credit;
+        TDataSource *DataSource4;
+        TStringField *Table3Cont;
+        TStringField *Table3Denumire;
+        TFloatField *Table3Debit;
+        TFloatField *Table3Credit;
+        TFloatField *Table3sold_initial_debit;
+        TFloatField *Table3sold_initial_credit;
+        TFloatField *Table3rulaj_cumulat_debit;
+        TFloatField *Table3rulaj_cumulat_credit;
+        TFloatField *Table3total_sume_debit;
+        TFloatField *Table3total_sume_credit;
+        TFloatField *Table3sold_final_debit;
+        TFloatField *Table3sold_final_credit;
+        TDataSource *DataSource5;
+        TBatchMove *BatchMove1;
+        TDataSource *DataSource6;
+        TDataSource *DataSource7;
+        TTable *Table8;
+        TDataSource *DataSource8;
+        TStringField *Table8Cont;
+        TStringField *Table8Denumire;
+        TFloatField *Table8Debit;
+        TFloatField *Table8Credit;
+        TFloatField *Table8sold_initial_debit;
+        TFloatField *Table8sold_initial_credit;
+        TFloatField *Table8rulaj_cumulat_debit;
+        TFloatField *Table8rulaj_cumulat_credit;
+        TFloatField *Table8total_sume_debit;
+        TFloatField *Table8total_sume_credit;
+        TFloatField *Table8sold_final_debit;
+        TFloatField *Table8sold_final_credit;
+        TDataSource *DataSource9;
+        TTable *stcont;
+        TStringField *stcontcont;
+        TBooleanField *stcontstare;
+        TTable *sah;
+        TIntegerField *sahan;
+        TStringField *sahluna;
+        TStringField *sahcont;
+        TStringField *sahdb;
+        TFloatField *sahsuma;
+        TBooleanField *Table3io;
+        TTable *Table4;
+        TStringField *Table4Simbol;
+        TStringField *Table4Denumire;
+        TStringField *Table4Tip;
+        TStringField *Table4Analitic;
+        TStringField *Table4Sintetic;
+        TMemoField *Table4Conturi_debitoare;
+        TMemoField *Table4Conturi_creditoare;
+        TBooleanField *Table4io;
+        TTable *Table5;
+        TStringField *Table5Cont;
+        TStringField *Table5Denumire;
+        TFloatField *Table5Debit;
+        TFloatField *Table5Credit;
+        TBooleanField *Table5io;
+        TTable *Table6;
+        TStringField *Table6Cont;
+        TStringField *Table6Denumire;
+        TFloatField *Table6Debit;
+        TFloatField *Table6Credit;
+        TBooleanField *Table6io;
+        TTable *Table7;
+        TStringField *Table7Nume_firma;
+        TFloatField *Table7Fisc;
+        TStringField *Table7J;
+        TStringField *Table7Banca_1;
+        TStringField *Table7Filiala_1;
+        TStringField *Table7Cont_banca_1;
+        TStringField *Table7Banca_2;
+        TStringField *Table7Filiala_2;
+        TStringField *Table7Cont_banca_2;
+        TFloatField *Table7Telefon_firma;
+        TMemoField *Table7Adresa_firma;
+        TStringField *Table7e_mail_firma;
+        TStringField *Table7Functia_pers_raport;
+        TStringField *Table7Nume_pers_raport;
+        TFloatField *Table7Cnp_angajator;
+private:	// User declarations
+public:		// User declarations
+        __fastcall Tdm1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE Tdm1 *dm1;
+//---------------------------------------------------------------------------
+#endif

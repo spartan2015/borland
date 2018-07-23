@@ -1,0 +1,170 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "Unit2.h"
+#include "iostream.h"
+#include "fstream.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "Trayicon"
+#pragma link "CSPIN"
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::FormActivate(TObject *Sender)
+{
+MonthCalendar1->Date=Now();
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TForm1::FormCreate(TObject *Sender)
+{
+grid1->Cells[0][0]="NEO";
+grid1->Cells[0][1]="8-10";
+grid1->Cells[0][2]="10-12";
+grid1->Cells[0][3]="12-14";
+grid1->Cells[0][4]="14-16";
+grid1->Cells[0][5]="16-18";
+grid1->Cells[0][6]="18-20";
+grid1->Cells[1][0]="Luni";
+grid1->Cells[2][0]="Marti";
+grid1->Cells[3][0]="Miercuri";
+grid1->Cells[4][0]="Joi";
+grid1->Cells[5][0]="Vineri";
+// de aci incarc din fisier manual
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::LoadExecute(TObject *Sender)
+{
+ifstream h("neo.txt");
+if (!h) { ShowMessage("Error inputing!"); return; }
+char sir[255];
+int y=1,i=1;
+for (int k=1; k<31; k++){
+        if (i==7) { i=1; y++; }
+        h.getline(sir, 255);
+        grid1->Cells[y][i]=sir;
+        i++;
+       }
+h.close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::SaveExecute(TObject *Sender)
+{
+ofstream input("neo.txt", ios::in | ios::out);
+if (!input) {ShowMessage("Error file!"); return;}
+int y=1,i=1;
+for (int k=1; k<31; k++) {
+  if (i==7) { i=1; y++; }
+  input << grid1->Cells[y][i].c_str() << endl;
+  i++;
+        }
+input.close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::AddExecute(TObject *Sender)
+{
+int i,y;
+if (c1->Text=="Luni")     i=1;
+if (c1->Text=="Marti")    i=2;
+if (c1->Text=="Miercuri") i=3;
+if (c1->Text=="Joi")      i=4;
+if (c1->Text=="Vineri")   i=5;
+
+if (c2->Text=="8-10")  y=1;
+if (c2->Text=="10-12") y=2;
+if (c2->Text=="12-14") y=3;
+if (c2->Text=="14-16") y=4;
+if (c2->Text=="16-18") y=5;
+if (c2->Text=="18-20") y=6;
+
+grid1->Cells[i][y]=e1->Text;        
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::e1KeyPress(TObject *Sender, char &Key)
+{
+if (Key==VK_RETURN) {
+int i,y;
+if (c1->Text=="Luni")     i=1;
+if (c1->Text=="Marti")    i=2;
+if (c1->Text=="Miercuri") i=3;
+if (c1->Text=="Joi")      i=4;
+if (c1->Text=="Vineri")   i=5;
+
+if (c2->Text=="8-10")  y=1;
+if (c2->Text=="10-12") y=2;
+if (c2->Text=="12-14") y=3;
+if (c2->Text=="14-16") y=4;
+if (c2->Text=="16-18") y=5;
+if (c2->Text=="18-20") y=6;
+
+grid1->Cells[i][y]=e1->Text;
+        }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::DeleteExecute(TObject *Sender)
+{
+int i,y;
+if (c1->Text=="Luni")     i=1;
+if (c1->Text=="Marti")    i=2;
+if (c1->Text=="Miercuri") i=3;
+if (c1->Text=="Joi")      i=4;
+if (c1->Text=="Vineri")   i=5;
+
+if (c2->Text=="8-10")  y=1;
+if (c2->Text=="10-12") y=2;
+if (c2->Text=="12-14") y=3;
+if (c2->Text=="14-16") y=4;
+if (c2->Text=="16-18") y=5;
+if (c2->Text=="18-20") y=6;
+
+grid1->Cells[i][y]="";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::DeleteallExecute(TObject *Sender)
+{
+int y=1,i=1;
+for (int k=1; k<31; k++) {
+        if (i==7) {y++; i=1;}
+        grid1->Cells[y][i]="";
+        i++;
+        }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::AboutExecute(TObject *Sender)
+{
+AboutBox->ShowModal();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::MinExecute(TObject *Sender)
+{
+Form1->WindowState=wsMinimized;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Timer1Timer(TObject *Sender)
+{
+Label7->Caption=TimeToStr(Time());        
+}
+//---------------------------------------------------------------------------
+
+

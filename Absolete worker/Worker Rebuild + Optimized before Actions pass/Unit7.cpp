@@ -1,0 +1,51 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit7.h"
+#include "Unit11.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+Tcod_judet *cod_judet;
+//---------------------------------------------------------------------------
+__fastcall Tcod_judet::Tcod_judet(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall Tcod_judet::Button1Click(TObject *Sender)
+{
+if (ListBox1->Items->Count==0) {MessageDlg("Nu este nici o valoare in lista!!!",mtWarning, TMsgDlgButtons() <<mbOK ,0); return; }
+if (ListBox1->ItemIndex==-1) {MessageDlg("Faceti totusi o selectie!",mtWarning, TMsgDlgButtons() <<mbOK ,0); return; }
+AnsiString raluca=ListBox1->Items->Strings[ListBox1->ItemIndex];
+int index=raluca.Pos(" ");
+raluca=raluca.Delete(1,index);
+Declaratii_cas->Edit14->Text=raluca;
+Close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tcod_judet::FormActivate(TObject *Sender)
+{
+ListBox1->Items->LoadFromFile("cod.txt");
+ListBox1->ItemIndex=0;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tcod_judet::Button2Click(TObject *Sender)
+{
+ListBox1->Items->Add(Edit1->Text);
+Edit1->Clear();
+ListBox1->Items->SaveToFile("cod.txt");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tcod_judet::Button3Click(TObject *Sender)
+{
+ListBox1->Items->Delete(ListBox1->ItemIndex);
+ListBox1->Items->SaveToFile("cod.txt");
+}
+//---------------------------------------------------------------------------
+

@@ -1,0 +1,307 @@
+object DM1: TDM1
+  OldCreateOrder = False
+  Left = 196
+  Top = 126
+  Height = 480
+  Width = 696
+  object DataSource1: TDataSource
+    DataSet = Table1
+    Left = 16
+    Top = 8
+  end
+  object DataSource2: TDataSource
+    DataSet = Table2
+    Left = 88
+    Top = 8
+  end
+  object Table1: TTable
+    DatabaseName = 'somaj\'
+    TableName = 'A1_2003august.DB'
+    Left = 16
+    Top = 56
+    object Table1An: TFloatField
+      FieldName = 'An'
+    end
+    object Table1Ln: TIntegerField
+      FieldName = 'Ln'
+      MaxValue = 12
+    end
+    object Table1Cf: TFloatField
+      FieldName = 'Cf'
+      Precision = 2
+    end
+    object Table1Cn: TFloatField
+      FieldName = 'Cn'
+      Precision = 2
+    end
+    object Table1Nume: TStringField
+      FieldName = 'Nume'
+      Size = 30
+    end
+    object Table1Cnp: TFloatField
+      FieldName = 'Cnp'
+      Precision = 2
+    end
+    object Table1Rm: TIntegerField
+      FieldName = 'Rm'
+      MaxValue = 1
+    end
+    object Table1Cv: TIntegerField
+      FieldName = 'Cv'
+      MaxValue = 1
+    end
+    object Table1Sbl: TFloatField
+      FieldName = 'Sbl'
+      Precision = 2
+    end
+    object Table1Cid: TFloatField
+      FieldName = 'Cid'
+      Precision = 2
+    end
+    object Table1Civ: TFloatField
+      FieldName = 'Civ'
+      Precision = 2
+    end
+    object Table1Cin: TFloatField
+      FieldName = 'Cin'
+      Precision = 2
+    end
+  end
+  object Table2: TTable
+    DatabaseName = 'somaj\'
+    TableName = 'A2_2003august.DB'
+    Left = 88
+    Top = 56
+    object Table2Nri: TIntegerField
+      DefaultExpression = '0'
+      FieldName = 'Nri'
+    end
+    object Table2Datai: TDateField
+      FieldName = 'Datai'
+    end
+    object Table2An: TSmallintField
+      FieldName = 'An'
+      MaxValue = 2030
+    end
+    object Table2Ln: TSmallintField
+      FieldName = 'Ln'
+      MaxValue = 12
+    end
+    object Table2Datal: TDateField
+      FieldName = 'Datal'
+    end
+    object Table2Den: TStringField
+      FieldName = 'Den'
+      Size = 60
+    end
+    object Table2Cf: TFloatField
+      FieldName = 'Cf'
+      Precision = 2
+    end
+    object Table2Rj: TStringField
+      FieldName = 'Rj'
+      Size = 3
+    end
+    object Table2Rn: TSmallintField
+      FieldName = 'Rn'
+    end
+    object Table2Ra: TSmallintField
+      FieldName = 'Ra'
+    end
+    object Table2Nra: TSmallintField
+      DefaultExpression = '0'
+      FieldName = 'Nra'
+    end
+    object Table2Fs: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Fs'
+      Precision = 2
+    end
+    object Table2Tcad: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Tcad'
+      Precision = 2
+    end
+    object Table2Tcav: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Tcav'
+      Precision = 2
+    end
+    object Table2Tcan: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Tcan'
+      Precision = 2
+    end
+    object Table2Ded: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Ded'
+      Precision = 2
+    end
+    object Table2Tcid: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Tcid'
+      Precision = 2
+    end
+    object Table2Tciv: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Tciv'
+      Precision = 2
+    end
+    object Table2Tcin: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Tcin'
+      Precision = 2
+    end
+    object Table2Totd: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Totd'
+      Precision = 2
+    end
+    object Table2Totv: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Totv'
+      Precision = 2
+    end
+    object Table2Totn: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Totn'
+      Precision = 2
+    end
+    object Table2Obl: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Obl'
+      Precision = 2
+    end
+    object Table2Oblna: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Oblna'
+      Precision = 2
+    end
+    object Table2Oblni: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Oblni'
+      Precision = 2
+    end
+    object Table2Maj: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Maj'
+      Precision = 2
+    end
+    object Table2Pen: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Pen'
+      Precision = 2
+    end
+    object Table2Totobl: TFloatField
+      DefaultExpression = '0'
+      FieldName = 'Totobl'
+      Precision = 2
+    end
+    object Table2B1: TStringField
+      FieldName = 'B1'
+      Size = 30
+    end
+    object Table2F1: TStringField
+      FieldName = 'F1'
+      Size = 30
+    end
+    object Table2C1: TStringField
+      FieldName = 'C1'
+      Size = 30
+    end
+    object Table2B2: TStringField
+      FieldName = 'B2'
+      Size = 30
+    end
+    object Table2F2: TStringField
+      FieldName = 'F2'
+      Size = 30
+    end
+    object Table2C2: TStringField
+      FieldName = 'C2'
+      Size = 30
+    end
+    object Table2Funca: TStringField
+      FieldName = 'Funca'
+      Size = 30
+    end
+    object Table2Numea: TStringField
+      FieldName = 'Numea'
+      Size = 30
+    end
+    object Table2Datad: TDateField
+      FieldName = 'Datad'
+    end
+    object Table2Sup: TSmallintField
+      DefaultExpression = '1'
+      FieldName = 'Sup'
+      MaxValue = 2
+      MinValue = 1
+    end
+  end
+  object Table4: TTable
+    TableName = 'A2.dbf'
+    TableType = ttFoxPro
+    Left = 240
+    Top = 56
+  end
+  object a1: TBatchMove
+    Destination = Table3
+    Source = Table1
+    Left = 16
+    Top = 152
+  end
+  object a2: TBatchMove
+    AbortOnKeyViol = False
+    AbortOnProblem = False
+    Destination = Table4
+    Source = Table2
+    Left = 152
+    Top = 152
+  end
+  object Table3: TTable
+    TableName = 'A1.dbf'
+    TableType = ttFoxPro
+    Left = 176
+    Top = 56
+  end
+  object Table5: TTable
+    DatabaseName = 'cas\'
+    Left = 16
+    Top = 216
+    object Table5AN: TIntegerField
+      FieldName = 'AN'
+    end
+    object Table5LN: TIntegerField
+      FieldName = 'LN'
+    end
+    object Table5CF: TLargeintField
+      FieldName = 'CF'
+    end
+  end
+  object Table6: TTable
+    DatabaseName = 'cas\'
+    Left = 64
+    Top = 216
+  end
+  object Table7: TTable
+    TableName = 'A11.DBF'
+    TableType = ttFoxPro
+    Left = 176
+    Top = 216
+  end
+  object Table8: TTable
+    TableName = 'A12.DBF'
+    TableType = ttFoxPro
+    Left = 224
+    Top = 216
+  end
+  object b1: TBatchMove
+    Left = 160
+    Top = 304
+  end
+  object b2: TBatchMove
+    Left = 240
+    Top = 304
+  end
+end

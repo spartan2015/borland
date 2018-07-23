@@ -1,0 +1,1063 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "Unit2.h"
+#include "Unit3.h"
+#include "Unit4.h"
+#include "Unit5.h"
+#include "Unit6.h"
+#include "Unit7.h"
+#include "Unit8.h"
+#include "Unit10plan.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TMain *Main;
+//---------------------------------------------------------------------------
+__fastcall TMain::TMain(TComponent* Owner)
+        : TForm(Owner)
+{
+datas=true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::SpeedButton1Click(TObject *Sender)
+{
+dm1->Table1->Prior();
+ComboBox1->Text=dm1->Table1an->AsString;
+ComboBox2->Text=dm1->Table1luna->AsString;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::SpeedButton2Click(TObject *Sender)
+{
+dm1->Table1->Next();
+ComboBox1->Text=dm1->Table1an->AsString;
+ComboBox2->Text=dm1->Table1luna->AsString;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::SpeedButton6Click(TObject *Sender)
+{
+dm1->Table1->Close();
+TabSheet1->TabVisible=false;
+TabSheet9->TabVisible=true;
+}
+//---------------------------------------------------------------------------
+void __fastcall TMain::TabSheet1Show(TObject *Sender)
+{
+if (datas) {
+Word an,luna,zi;
+TDate dat;
+dat=Date();
+DecodeDate(dat,an,luna,zi);
+ComboBox1->Text=IntToStr(an);
+ComboBox2->Text=FormatDateTime("mmmm", Now() + 0.125);;
+
+Set<TLocateOption,0,1> flags;
+flags << loCaseInsensitive;
+//********** pozitionare data curenta daca poate **********
+dm1->Table1->Locate("an",(ComboBox1->Text),flags);
+dm1->Table1->Filtered=true;
+dm1->Table1->Filter="an='"+ComboBox1->Text+"'";
+dm1->Table1->Locate("luna",(ComboBox2->Text),flags);
+dm1->Table1->Filtered=false;
+datas=false;
+}
+
+//********* informatii generale: **********************
+dm1->Table1->Filter="an='"+ComboBox1->Text+"'";
+dm1->Table1->Filtered=true;
+Label14->Caption=dm1->Table1->RecordCount ;
+AnsiString filtru=(StrToInt(ComboBox1->Text)-1);
+dm1->Table1->Filter="an='"+filtru+"'";
+Label15->Caption=dm1->Table1->RecordCount ;
+dm1->Table1->Filtered=false;
+Label16->Caption=dm1->Table1->RecordCount ;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::SpeedButton5Click(TObject *Sender)
+{
+TReplaceFlags Flags;
+Flags << rfReplaceAll;
+TLocateOptions lo;
+lo <<loCaseInsensitive;
+
+bool s1,s2;
+s1=dm1->Table1->Locate("an",ComboBox1->Text,lo);
+s2=dm1->Table1->Locate("luna",ComboBox2->Text,lo);
+if (!s1 | !s2) {
+        ShowMessage("Nu am gasit datele !");
+        return;
+        }
+dm1->Table2->DatabaseName="data\\"+StringReplace(dm1->Table7Nume_firma->AsString," ","z",Flags)+"\\";
+dm1->Table2->TableName="j"+(ComboBox1->Text)+(ComboBox2->Text);
+dm1->Table2->Open();
+
+dm1->Table8->DatabaseName="data\\"+StringReplace(dm1->Table7Nume_firma->AsString," ","z",Flags)+"\\";
+
+dm1->Table3->DatabaseName="data\\"+StringReplace(dm1->Table7Nume_firma->AsString," ","z",Flags)+"\\";
+dm1->Table3->TableName="b"+(ComboBox1->Text)+(ComboBox2->Text);
+
+
+TabSheet1->TabVisible=false;
+TabSheet1->Visible=false;
+TabSheet2->TabVisible=true;
+TabSheet2->Visible=true;
+}
+//---------------------------------------------------------------------------
+void __fastcall TMain::SpeedButton7Click(TObject *Sender)
+{
+dm1->Table2->Prior();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::SpeedButton8Click(TObject *Sender)
+{
+dm1->Table2->Next();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button1Click(TObject *Sender)
+{
+if (dm1->Table4->Active==false) dm1->Table4->Active=true;
+//************************* atribution************
+
+//*******they call me the seeker...************
+Set < TLocateOption,0,1 > flags;
+flags <<loCaseInsensitive;
+
+bool seeker0,seeker1,seeker2,seeker3;
+dm1->Table2->First();
+        for (int k=1; k<dm1->Table2->RecordCount+1; k++) {
+dm1->Table2->Edit();
+if (dm1->Table2->RecNo==-1)
+        dm1->Table2Nr_crt->AsInteger=dm1->Table2->RecordCount+1;
+else
+        dm1->Table2Nr_crt->AsInteger=dm1->Table2->RecNo;
+dm1->Table2Sume_credit->AsFloat=DBEdit5->Field->AsFloat;
+                dm1->Table2->Post();
+        seeker0=dm1->Table4->Locate("Simbol", dm1->Table2Simbol_debit->AsString, flags);
+        seeker1=dm1->Table4->Locate("Simbol", dm1->Table2Simbol_credit->AsString, flags);
+//checking dependencies ********************
+        if (seeker0 & seeker1) {
+AnsiString dat,datbig,trunc,truncpos;
+int index,index1;
+//********************beginner *******************
+if (DBEdit3->Field->AsString.Length() == 3) {
+        if (DBEdit4->Field->AsString.Length() == 3) {
+//        ShowMessage("3-3");
+        dm1->Table4->Locate("Simbol",DBEdit3->Field->AsString, flags);
+        dat=dm1->Table4Conturi_debitoare->AsString;
+        index=dat.Pos(DBEdit4->Field->AsString);
+        }
+        if (DBEdit4->Field->AsString.Length() > 3) {
+//        ShowMessage("3-4");
+        dm1->Table4->Locate("Simbol",DBEdit3->Field->AsString, flags);
+        dat=dm1->Table4Conturi_debitoare->AsString;
+        index=dat.Pos(DBEdit4->Field->AsString);
+        if (index==0) index=dat.Pos(DBEdit4->Field->AsString.SubString(1,3));
+        }
+
+        }
+else    {
+        if (DBEdit4->Field->AsString.Length() == 3) {
+//        ShowMessage("4-3");
+        dm1->Table4->Locate("Simbol",DBEdit3->Field->AsString, flags);
+        dat=dm1->Table4Conturi_debitoare->AsString;
+        index=dat.Pos(DBEdit4->Field->AsString);
+        if (dat.Length() < 3) {
+        dm1->Table4->Locate("Simbol",DBEdit3->Field->AsString.SubString(1,3), flags);
+        dat=dm1->Table4Conturi_debitoare->AsString;
+        index=dat.Pos(DBEdit4->Field->AsString);
+        }
+        }
+        if (DBEdit4->Field->AsString.Length() > 3) {
+//        ShowMessage("4-4");
+        dm1->Table4->Locate("Simbol",DBEdit3->Field->AsString, flags);
+        dat=dm1->Table4Conturi_debitoare->AsString;
+        index=dat.Pos(DBEdit4->Field->AsString);
+        if (dat.Length() < 3) {
+        dm1->Table4->Locate("Simbol",DBEdit3->Field->AsString.SubString(1,3), flags);
+        dat=dm1->Table4Conturi_debitoare->AsString;
+        index=dat.Pos(DBEdit4->Field->AsString);
+        if (index==0) index=dat.Pos(DBEdit4->Field->AsString.SubString(1,3));
+        }
+        }
+        }
+//***** reciprocitate******************************************************
+/* temp  /*/
+if (DBEdit4->Field->AsString.Length() == 3) {
+        if (DBEdit3->Field->AsString.Length() == 3) {
+//        ShowMessage("3-3");
+        dm1->Table4->Locate("Simbol",DBEdit4->Field->AsString, flags);
+        dat=dm1->Table4Conturi_creditoare->AsString;
+        index=dat.Pos(DBEdit3->Field->AsString);
+        }
+        if (DBEdit3->Field->AsString.Length() > 3) {
+//        ShowMessage("3-4");
+        dm1->Table4->Locate("Simbol",DBEdit4->Field->AsString, flags);
+        dat=dm1->Table4Conturi_creditoare->AsString;
+        index=dat.Pos(DBEdit3->Field->AsString);
+        if (index==0) index=dat.Pos(DBEdit3->Field->AsString.SubString(1,3));
+        }
+
+        }
+else    {
+        if (DBEdit3->Field->AsString.Length() == 3) {
+//        ShowMessage("4-3");
+        dm1->Table4->Locate("Simbol",DBEdit4->Field->AsString, flags);
+        dat=dm1->Table4Conturi_creditoare->AsString;
+        index=dat.Pos(DBEdit3->Field->AsString);
+        if (dat.Length() < 3) {
+        dm1->Table4->Locate("Simbol",DBEdit4->Field->AsString.SubString(1,3), flags);
+        dat=dm1->Table4Conturi_creditoare->AsString;
+        index=dat.Pos(DBEdit3->Field->AsString);
+        }
+        }
+        if (DBEdit3->Field->AsString.Length() > 3) {
+//        ShowMessage("4-4");
+        dm1->Table4->Locate("Simbol",DBEdit4->Field->AsString, flags);
+        dat=dm1->Table4Conturi_creditoare->AsString;
+        index=dat.Pos(DBEdit3->Field->AsString);
+        if (dat.Length() < 3) {
+        dm1->Table4->Locate("Simbol",DBEdit4->Field->AsString.SubString(1,3), flags);
+        dat=dm1->Table4Conturi_creditoare->AsString;
+        index=dat.Pos(DBEdit3->Field->AsString);
+        if (index==0) index=dat.Pos(DBEdit3->Field->AsString.SubString(1,3));
+        }
+        }
+        }
+/*/ // end temp   /*/
+//end reciprocitate *******************************************
+if (index==0 || index1==0)
+        ShowMessage("Eroare grad II, | Dependente incorecte: "+DBEdit3->Field->AsString+"-"+DBEdit4->Field->AsString);
+
+                }
+else ShowMessage("Eroare grad I, |Simbol necunoscut: "+DBEdit3->Field->AsString+"-"+DBEdit4->Field->AsString);
+        dm1->Table2->Next();
+                }
+dm1->Table4->Active=false;
+
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button5Click(TObject *Sender)
+{
+dm1->Table2->Append();
+FocusControl(DBEdit1);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button3Click(TObject *Sender)
+{
+if (MessageDlg("Chiar vrei sa stergi?", mtConfirmation, TMsgDlgButtons() << mbYes << mbNo, 0) == mrYes)
+        dm1->Table2->Delete();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::SpeedButton4Click(TObject *Sender)
+{
+if (MessageDlg("Chiar vrei sa stergi?", mtConfirmation, TMsgDlgButtons() << mbYes << mbNo, 0) == mrYes)
+        dm1->Table1->Delete();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button4Click(TObject *Sender)
+{
+dm1->Table2->Close();
+TabSheet2->TabVisible=false;
+TabSheet1->TabVisible=true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button6Click(TObject *Sender)
+{
+TReplaceFlags Flags;
+Flags << rfReplaceAll;
+if (dm1->Table3->Active) {
+             dm1->Table3->Active=false;
+             dm1->Table3->TableName="b"+(ComboBox1->Text)+(ComboBox2->Text);
+             dm1->Table3->Active=true; }
+else {
+      dm1->Table3->TableName="b"+(ComboBox1->Text)+(ComboBox2->Text);
+      dm1->Table3->Active=true; }
+
+TabSheet2->TabVisible=false;
+TabSheet3->TabVisible=true;
+TabSheet3->Visible=true;
+TabSheet4->TabVisible=true;
+TabSheet5->TabVisible=true;
+TabSheet6->TabVisible=true;
+TabSheet7->TabVisible=true;
+TabSheet8->TabVisible=true;
+      }
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::SpeedButton3Click(TObject *Sender)
+{
+Set<TLocateOption,0,1> flags;
+flags << loCaseInsensitive << loPartialKey;
+TReplaceFlags Flags;
+Flags << rfReplaceAll;
+
+bool locator0=dm1->Table1->Locate("an",ComboBox1->Text,flags);
+bool locator1=dm1->Table1->Locate("luna",ComboBox2->Text,flags);
+if (locator0 & locator1) ShowMessage("Deja exista");
+else {
+dm1->Table1->Append();
+if (MessageDlg("Creez baza de date?", mtConfirmation, TMsgDlgButtons() <<mbYes <<mbNo, 0) == mrYes) {
+
+dm1->Table2->DatabaseName="data\\"+StringReplace(dm1->Table7Nume_firma->AsString," ","z",Flags)+"\\";
+dm1->Table3->DatabaseName="data\\"+StringReplace(dm1->Table7Nume_firma->AsString," ","z",Flags)+"\\";
+
+dm1->Table2->TableName ="j"+(ComboBox1->Text)+(ComboBox2->Text);
+if (dm1->Table2->Exists)
+    if (MessageDlg("Jurnal deja existent,\n"+ComboBox1->Text+"\n"+ComboBox1->Text+", rescriu??", mtConfirmation, TMsgDlgButtons() <<mbYes <<mbNo, 0) == mrYes)
+    dm1->Table2->CreateTable();
+    else return;
+else dm1->Table2->CreateTable();
+    //			Balanta
+dm1->Table3->TableName ="b"+(ComboBox1->Text)+(ComboBox2->Text);
+if (dm1->Table3->Exists)
+    if (MessageDlg("Balanta deja existenta,\n"+ComboBox1->Text+"\n"+ComboBox1->Text+", rescriu??", mtConfirmation, TMsgDlgButtons() <<mbYes <<mbNo, 0) == mrYes)
+    dm1->Table3->CreateTable();
+    else return;
+else dm1->Table3->CreateTable();
+//*************************************
+dm1->Table1->Edit();
+dm1->Table1an->AsString=ComboBox1->Text;
+dm1->Table1luna->AsString=ComboBox2->Text;
+dm1->Table1->Post();
+                }
+        }
+}
+//---------------------------------------------------------------------------
+void __fastcall TMain::Button7Click(TObject *Sender)
+{
+dm1->Table2->First();
+dm1->Table4->Active=true;
+
+TReplaceFlags Flags;
+Flags << rfReplaceAll;
+
+Set < TLocateOption,0,1 > flags;
+flags << loCaseInsensitive;
+
+dm1->Table3->Active=true;
+//***********************deschid sold initial**********
+if (!dm1->Table5->Active) dm1->Table5->Open();
+
+// activez conturile active ale firmei cu un for
+dm1->stcont->Open();
+for (int eu=1; eu<dm1->stcont->RecordCount+1; eu++) {
+               dm1->Table3->Append();
+               dm1->Table3Cont->AsString=dm1->stcontcont->AsString;
+               bool lo=dm1->Table4->Locate("Simbol", dm1->stcontcont->AsString, flags);
+               if (!lo) dm1->Table3Denumire->AsString="Eroare in planul de conturi!!! Balanta gresita!";
+               if (lo) {
+               dm1->Table3Denumire->AsString=dm1->Table4Denumire->AsString;
+               dm1->Table3io->AsBoolean=dm1->Table4io->AsBoolean;
+               }
+               dm1->stcont->Next();
+                }
+dm1->stcont->Active=false;
+// incheiat activarea conturilor
+
+//****************** sold initial *******
+dm1->Table5->First();
+for (int v=1; v<dm1->Table5->RecordCount+1; v++) {
+bool seeker;
+seeker=dm1->Table3->Locate("Cont", dm1->Table5Cont->AsString, flags);
+if (!seeker) {
+        dm1->Table3->Append();
+        dm1->Table3Cont->AsString=dm1->Table5Cont->AsString;
+        dm1->Table3io->AsBoolean=dm1->Table5io->AsBoolean;
+        dm1->Table3Denumire->AsString=dm1->Table5Denumire->AsString;
+        dm1->Table3sold_initial_debit->AsFloat=dm1->Table5Debit->AsFloat;
+        dm1->Table3sold_initial_credit->AsFloat=dm1->Table5Credit->AsFloat;
+        dm1->Table3->Post();
+        }
+else    {
+        dm1->Table3->Edit();
+        dm1->Table3sold_initial_debit->AsFloat=dm1->Table5Debit->AsFloat;
+        dm1->Table3sold_initial_credit->AsFloat=dm1->Table5Credit->AsFloat;
+        dm1->Table3->Post();
+        }
+dm1->Table5->Next();
+}
+dm1->Table5->Close();
+dm1->stcont->Open();
+// === s-au activat conturile !!! si s-a trecut soldul initial pana aici de introdu verificare
+// === si activare conturi din rulajul curent in stcont - activare automata ++
+//****************** end of balanta completa ****************  Table3 - jurnal | Table3 - balanta
+for (int i=1; i<dm1->Table2->RecordCount+1; i++) {
+if (dm1->Table2Simbol_debit->AsString!="0") {
+bool seeker001=dm1->Table3->Locate("Cont", dm1->Table2Simbol_debit->AsString, flags);
+if (seeker001) {
+        dm1->Table3->Edit();
+        dm1->Table3Debit->AsFloat=dm1->Table3Debit->AsFloat+dm1->Table2Sume_debit->AsFloat;
+        dm1->Table3->Post();
+        }
+else {
+        dm1->Table3->Edit();
+        if (dm1->Table3->RecordCount!=0) dm1->Table3->Append();
+        dm1->Table3Cont->AsString=dm1->Table2Simbol_debit->AsString;
+        bool locker=dm1->Table4->Locate("Simbol", dm1->Table2Simbol_debit->AsString, flags);
+        if (!locker) dm1->Table3Denumire->AsString="Eroare in plan conturi, balanta eronata!!!";
+        if (locker)  {
+        dm1->Table3io->AsBoolean=dm1->Table4io->AsBoolean;
+        dm1->Table3Denumire->AsString=dm1->Table4Denumire->AsString;
+        dm1->Table3Debit->AsFloat=dm1->Table2Sume_debit->AsFloat;
+        }
+        dm1->Table3->Post();
+        }
+                                }
+//*******again reciprocitate pentru credit*******
+bool seeker002;
+if (dm1->Table2Simbol_credit->AsString!="0") {
+seeker002=dm1->Table3->Locate("Cont", dm1->Table2Simbol_credit->AsString, flags);
+if (seeker002) {
+        dm1->Table3->Edit();
+        dm1->Table3Credit->AsFloat=dm1->Table3Credit->AsFloat+dm1->Table2Sume_credit->AsFloat;
+        dm1->Table3->Post();
+        }
+else {
+        dm1->Table3->Edit();
+        if (dm1->Table3->RecordCount!=0) dm1->Table3->Append();
+        dm1->Table3Cont->AsString=dm1->Table2Simbol_credit->AsString;
+        bool locker=dm1->Table4->Locate("Simbol", dm1->Table2Simbol_credit->AsString, flags);
+        if (!locker) dm1->Table3Denumire->AsString="Eroare in plan conturi, balanta eronata!!!";
+        if (locker) {
+        dm1->Table3io->AsBoolean=dm1->Table4io->AsBoolean;
+        dm1->Table3Denumire->AsString=dm1->Table4Denumire->AsString;
+        dm1->Table3Credit->AsFloat=dm1->Table2Sume_credit->AsFloat;
+        }
+        dm1->Table3->Post();
+        }
+                                }
+//*********** end recirpoc ********
+bool activ=dm1->stcont->Locate("cont",dm1->Table3Cont->AsString, flags);
+if (!activ){
+        dm1->stcont->Append();
+        dm1->stcontcont->AsString=dm1->Table3Cont->AsString;
+        dm1->stcontstare->AsBoolean=true;
+        dm1->stcont->Post();
+        }
+
+dm1->Table2->Next();
+        }
+dm1->stcont->Close();
+//*********** forul inchis primar inchis - trecut datele din jurnal***
+
+// inserarea speciala pt radio3==1 -adik manual sa verifice daca un cont care
+// nu are sold initial si nici rulaj curent este totusi pe rulaj cumulat manul
+// atentie ca trebe rezolvata si problema automata daca radio3==0
+// se face de acu
+/*if (RadioGroup3->ItemIndex==1) {
+dm1->Table3->First();
+dm1->Table6->Open();
+dm1->Table6->First();
+        for (int r=1; r<dm1->Table6->RecordCount+1; r++){
+          int r1=dm1->Table3->Locate("Cont", dm1->Table6Cont->AsString, flags);
+          if (!r1) {dm1->Table3->Append();
+                    dm1->Table3rulaj_cumulat_debit->AsFloat=dm1->Table6Debit->AsFloat;
+                    dm1->Table3rulaj_cumulat_credit->AsFloat=dm1->Table6Credit->AsFloat;
+                    dm1->Table3Cont->AsString=dm1->Table6Cont->AsString;
+                    dm1->Table3Denumire->AsString=dm1->Table6Denumire->AsString;
+                    dm1->Table3->Post();
+                   }
+         dm1->Table6->Next();
+                }
+                                }
+
+//*********** againf for pentru rulaj cumulat, total sume si sold final*********
+/*if (dm1->Table1->RecNo!=0)   {
+        dm1->Table1->Prior();
+        if (dm1->Table8->Active){
+            dm1->Table8->Active=false;
+            dm1->Table8->TableName="b"+(dm1->Table1an->AsString)+(dm1->Table1luna->AsString)+StringReplace(DBEdit6->Field->AsString," ","z",Flags);
+            dm1->Table8->Active=true; }
+        if (!dm1->Table8->Active) {
+             dm1->Table8->TableName="b"+(dm1->Table1an->AsString)+(dm1->Table1luna->AsString)+StringReplace(DBEdit6->Field->AsString," ","z",Flags);
+             dm1->Table8->Active=true; }
+          dm1->Table8->First();
+                for (int neo; neo<dm1->Table8->RecordCount+1; neo++){
+                bool ro=dm1->Table8->Locate("Cont", simbol, flags);
+                if (!ro) {
+                         dm1->Table3->Append();
+                         dm1->Table3Cont->AsString=dm1->Table8Cont->AsString;
+                         dm1->Table3Denumire->AsString=dm1->Table3Denumire->AsString;
+                         dm1->Table3rulaj_cumulat_debit->AsFloat=dm1->Table8rulaj_cumulat_debit->AsFloat;
+                         dm1->Table3rulaj_cumulat_credit->AsFloat=dm1->Table8rulaj_cumulat_credit->AsFloat;
+                         dm1->Table3->Post();
+                         }
+                dm1->Table8->Next();
+                }
+dm1->Table1->Next();
+*///rulaj cumulat pt toate contuirle de introdus;
+
+//inchidere cu 121 - ?? verifica e 121 inaintea rulaj cumulat?
+dm1->Table3->First();
+try {
+double x1=0,x2=0;
+for (int d1=1; d1<dm1->Table3->RecordCount+1; d1++)
+                {
+        if (dm1->Table3Cont->AsString.SubString(1,1)=="6"){
+                dm1->Table3->Edit();
+                dm1->Table3Credit->AsFloat= dm1->Table3Debit->AsFloat;
+                dm1->Table3->Post();
+                x1+=dm1->Table3Debit->AsFloat;
+                 }
+
+        if (dm1->Table3Cont->AsString.SubString(1,1)=="7"){
+                dm1->Table3->Edit();
+                dm1->Table3Debit->AsFloat=dm1->Table3Credit->AsFloat;
+                dm1->Table3->Post();
+                x2+=dm1->Table3Credit->AsFloat;
+                }
+        dm1->Table3->Next();
+                }
+bool closer121=dm1->Table3->Locate("Cont", Edit1->Text, flags);
+if (close121){
+dm1->Table3->Edit();
+dm1->Table3Debit->AsFloat+=x1;
+dm1->Table3Credit->AsFloat+=x2;
+dm1->Table3->Post();
+}
+if (!closer121)
+{
+dm1->Table3->Append();
+dm1->Table3Cont->AsString=Edit1->Text;
+        bool locker=dm1->Table4->Locate("Simbol", Edit1->Text, flags);
+        if (!locker) dm1->Table3Denumire->AsString="Eroare in plan conturi, balanta eronata!!!";
+        if (locker) {
+        dm1->Table3io->AsBoolean=dm1->Table4io->AsBoolean;
+        dm1->Table3Denumire->AsString=dm1->Table4Denumire->AsString;
+        }
+dm1->Table3Debit->AsFloat=x1;
+dm1->Table3Credit->AsFloat=x2;
+dm1->Table3->Post();
+}
+             }
+            catch(...) {ShowMessage(dm1->Table3Cont->AsString);}
+//=========== inchidere cu 121 ==============
+
+double debit=0, credit=0;
+int records=dm1->Table3->RecordCount;
+//int rec;
+AnsiString simbol;
+//tabel=dm1->Table3->TableName;
+//dm1->Table1->Filtered=true;
+//dm1->Table1->Filter="an='"+ComboBox1->Text+"'";
+//dm1->Table1->Locate("luna",ComboBox2->Text,flags);
+//rec=dm1->Table1->RecNo;
+dm1->Table3->First();
+// erno == dm1->Table1->First();
+        for (int j=1; j<records+1; j++) {
+        simbol=dm1->Table3Cont->AsString;
+        //*** err           Table1->First();
+        if (RadioGroup3->ItemIndex==0) {
+// rulaj cumulat in r--
+if (dm1->Table1->RecNo > 1)   {
+        dm1->Table1->Prior();
+        if (dm1->Table8->Active){
+            dm1->Table8->Active=false;
+            dm1->Table8->TableName="b"+(dm1->Table1an->AsString)+(dm1->Table1luna->AsString);
+            dm1->Table8->Active=true; }
+        if (!dm1->Table8->Active) {
+             dm1->Table8->TableName="b"+(dm1->Table1an->AsString)+(dm1->Table1luna->AsString);
+             dm1->Table8->Active=true; }
+        bool sentry=dm1->Table8->Locate("Cont", simbol, flags);
+        if (sentry) {
+        debit=dm1->Table8rulaj_cumulat_debit->AsFloat;
+        credit=dm1->Table8rulaj_cumulat_credit->AsFloat; }
+        dm1->Table1->Next();
+                }
+        }
+if (dm1->Table1->RecNo < 2) {
+                    debit=0;
+                    credit=0;
+                        }
+if (RadioGroup3->ItemIndex==1) {
+        dm1->Table6->Open();
+        bool sentryguy;
+        sentryguy=dm1->Table6->Locate("Cont", simbol,flags);
+        if (sentryguy) {
+                debit=dm1->Table6Debit->AsFloat;
+                credit=dm1->Table6Credit->AsFloat;
+             }
+        dm1->Table6->Close();
+         }
+//************ forul de nivel II inchis * absolete - remain only for educational purpose
+//warning - no modification made to Table3 - this should be removed
+//if (dm1->Table3->Active){
+//            dm1->Table3->Active=false;
+//            dm1->Table3->TableName=tabel;
+//            dm1->Table3->Active=true; }
+//        else {
+//             dm1->Table3->TableName=tabel;
+//             dm1->Table3->Active=true; }
+dm1->Table3->Locate("Cont", simbol, flags);
+dm1->Table3->Edit();
+dm1->Table3rulaj_cumulat_debit->AsFloat=debit+dm1->Table3Debit->AsFloat;
+dm1->Table3rulaj_cumulat_credit->AsFloat=credit+dm1->Table3Credit->AsFloat;
+dm1->Table3total_sume_debit->AsFloat=dm1->Table3sold_initial_debit->AsFloat+dm1->Table3rulaj_cumulat_debit->AsFloat;
+dm1->Table3total_sume_credit->AsFloat=dm1->Table3sold_initial_credit->AsFloat+dm1->Table3rulaj_cumulat_credit->AsFloat;
+        dm1->Table4->Locate("Simbol", simbol, flags);
+if (dm1->Table4Tip->AsString=="a")  dm1->Table3sold_final_debit->AsFloat=dm1->Table3total_sume_debit->AsFloat-dm1->Table3total_sume_credit->AsFloat;
+if (dm1->Table4Tip->AsString=="p")  dm1->Table3sold_final_credit->AsFloat=dm1->Table3total_sume_credit->AsFloat-dm1->Table3total_sume_debit->AsFloat;
+if (dm1->Table4Tip->AsString=="b" | dm1->Table4Tip->AsString=="m") {
+        dm1->Table3sold_final_debit->AsFloat=dm1->Table3total_sume_debit->AsFloat-dm1->Table3total_sume_credit->AsFloat;
+        dm1->Table3sold_final_credit->AsFloat=dm1->Table3total_sume_credit->AsFloat-dm1->Table3total_sume_debit->AsFloat;
+        if (dm1->Table3sold_final_debit->AsFloat>dm1->Table3sold_final_credit->AsFloat) dm1->Table3sold_final_credit->AsFloat=0;
+        if (dm1->Table3sold_final_debit->AsFloat<dm1->Table3sold_final_credit->AsFloat) dm1->Table3sold_final_debit->AsFloat=0;
+        }
+dm1->Table3->Post();
+debit=0;
+credit=0;
+dm1->Table3->Next();
+        }
+        //******************inchidem forul de nivel I ***************
+dm1->Table4->Active=false;
+dm1->Table3->Active=false;
+if (dm1->Table8->Active==true) dm1->Table8->Active=false;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button9Click(TObject *Sender)
+{
+TReplaceFlags Flags;
+Flags <<rfReplaceAll;
+if  (dm1->Table3->Active) {
+dm1->Table3->Active=false;
+dm1->Table3->TableName="b"+(ComboBox1->Text)+(ComboBox2->Text);
+dm1->Table3->Exclusive=true;
+dm1->Table3->Active=true;
+dm1->Table3->EmptyTable();
+dm1->Table3->Close();
+dm1->Table3->Exclusive=false;
+        }
+else {
+        dm1->Table3->TableName="b"+(ComboBox1->Text)+(ComboBox2->Text);
+        dm1->Table3->EmptyTable();
+        }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::RadioGroup1Click(TObject *Sender)
+{
+if (RadioGroup1->ItemIndex==1) {
+        MaskEdit1->Enabled=false;
+        ComboBox3->Enabled=false; }
+else {
+        MaskEdit1->Enabled=true;
+        ComboBox3->Enabled=true; }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button10Click(TObject *Sender)
+{
+TReplaceFlags Flags;
+Flags << rfReplaceAll;
+if (RadioGroup1->ItemIndex==0) {
+Set < TLocateOption,0,1 > flags;
+flags << loCaseInsensitive;
+        bool seeker0,seeker1;
+        seeker0=dm1->Table1->Locate("an", MaskEdit1->Text, flags);
+        seeker1=dm1->Table1->Locate("luna", ComboBox3->Text, flags);
+if (seeker0 & seeker1) {
+          ShowMessage("Gasit!");
+dm1->Table5->EmptyTable();
+dm1->Table3->DatabaseName="data\\"+StringReplace(dm1->Table7Nume_firma->AsString," ","z",Flags)+"\\";
+dm1->Table3->TableName="b"+dm1->Table1an->AsString+dm1->Table1luna->AsString;
+dm1->BatchMove1->Execute();
+        }
+              }
+else {
+Sold_initial->Show();
+        }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::ComboBox1Change(TObject *Sender)
+{
+Set <TLocateOption,0,1 > flags;
+flags <<loCaseInsensitive ;
+dm1->Table1->Filtered=true;
+dm1->Table1->Filter="an='"+ComboBox1->Text+"'";
+dm1->Table1->Locate("luna", ComboBox2->Text, flags);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::ComboBox2Change(TObject *Sender)
+{
+Set <TLocateOption,0,1 > flags;
+flags <<loCaseInsensitive ;
+dm1->Table1->Locate("luna", ComboBox2->Text, flags);
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TMain::RadioGroup3Click(TObject *Sender)
+{
+if (RadioGroup3->ItemIndex==1) Button11->Enabled=true;
+else Button11->Enabled=false;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button11Click(TObject *Sender)
+{
+if (!dm1->Table6->Active) dm1->Table6->Active=true;
+Rulaj_cumulat->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::SpeedButton9Click(TObject *Sender)
+{
+dm1->Table7->Prior();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::SpeedButton10Click(TObject *Sender)
+{
+dm1->Table7->Next();        
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button12Click(TObject *Sender)
+{
+DBEdit6->ReadOnly=false;
+DBEdit7->ReadOnly=false;
+DBEdit8->ReadOnly=false;
+DBEdit9->ReadOnly=false;
+DBEdit10->ReadOnly=false;
+DBEdit11->ReadOnly=false;
+DBEdit12->ReadOnly=false;
+DBEdit13->ReadOnly=false;
+DBEdit14->ReadOnly=false;
+DBEdit15->ReadOnly=false;
+DBEdit16->ReadOnly=false;
+DBEdit17->ReadOnly=false;
+DBEdit18->ReadOnly=false;
+DBEdit19->ReadOnly=false;
+DBMemo1->ReadOnly=false;
+
+
+dm1->Table7->Append();
+FocusControl(DBEdit7);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button13Click(TObject *Sender)
+{
+if (MessageDlg("Chiar vrei sa stergi?", mtWarning, TMsgDlgButtons() <<mbYes <<mbNo,0)==mrYes)
+        dm1->Table7->Delete();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button14Click(TObject *Sender)
+{
+dm1->Table7->Edit();
+dm1->Table7->Post();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button15Click(TObject *Sender)
+{
+if (Button15->Caption=="Modifica") {
+DBEdit6->ReadOnly=false;
+DBEdit7->ReadOnly=false;
+DBEdit8->ReadOnly=false;
+DBEdit9->ReadOnly=false;
+DBEdit10->ReadOnly=false;
+DBEdit11->ReadOnly=false;
+DBEdit12->ReadOnly=false;
+DBEdit13->ReadOnly=false;
+DBEdit14->ReadOnly=false;
+DBEdit15->ReadOnly=false;
+DBEdit16->ReadOnly=false;
+DBEdit17->ReadOnly=false;
+DBEdit18->ReadOnly=false;
+DBEdit19->ReadOnly=false;
+DBMemo1->ReadOnly=false;
+Button15->Caption="Protejeaza";
+}
+else {
+DBEdit6->ReadOnly=true;
+DBEdit7->ReadOnly=true;
+DBEdit8->ReadOnly=true;
+DBEdit9->ReadOnly=true;
+DBEdit10->ReadOnly=true;
+DBEdit11->ReadOnly=true;
+DBEdit12->ReadOnly=true;
+DBEdit13->ReadOnly=true;
+DBEdit14->ReadOnly=true;
+DBEdit15->ReadOnly=true;
+DBEdit16->ReadOnly=true;
+DBEdit17->ReadOnly=true;
+DBEdit18->ReadOnly=true;
+DBEdit19->ReadOnly=true;
+DBMemo1->ReadOnly=true;
+Button15->Caption="Modifica";
+}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button17Click(TObject *Sender)
+{
+dm1->Table7->Close();
+Application->Terminate();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button16Click(TObject *Sender)
+{
+TReplaceFlags Flags;
+Flags << rfReplaceAll;
+
+dm1->Table1->TableName=StringReplace(DBEdit6->Text," ","z",Flags);
+dm1->Table1->Active=true;
+TabSheet9->TabVisible=false;
+TabSheet1->TabVisible=true;
+
+dm1->Table5->DatabaseName="data\\"+StringReplace(DBEdit6->Text," ","z",Flags);
+dm1->Table6->DatabaseName="data\\"+StringReplace(DBEdit6->Text," ","z",Flags);
+// ======= stcont - contactiv
+dm1->stcont->DatabaseName="data\\"+StringReplace(DBEdit6->Text," ","z",Flags);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button18Click(TObject *Sender)
+{
+TReplaceFlags Flags;
+Flags << rfReplaceAll;
+if (MessageDlg("Chiar creez baza de date?", mtConfirmation, TMsgDlgButtons() <<mbYes <<mbNo,0)==mrYes) {
+dm1->Table1->TableName=StringReplace(DBEdit6->Text," ","z",Flags);
+CreateDir("data\\"+StringReplace(DBEdit6->Text," ","z",Flags));
+if (dm1->Table1->Exists)
+    if (MessageDlg("Rescriu 1?", mtConfirmation, TMsgDlgButtons() << mbYes << mbNo, 0) == mrYes)
+        dm1->Table1->CreateTable();
+    else {;}
+else dm1->Table1->CreateTable();
+//==== stcont
+dm1->stcont->DatabaseName="data\\"+StringReplace(DBEdit6->Text," ","z",Flags);
+if (dm1->stcont->Exists)
+    if (MessageDlg("Rescriu 2?", mtConfirmation, TMsgDlgButtons() << mbYes << mbNo, 0) == mrYes)
+        dm1->stcont->CreateTable();
+    else {;}
+else  dm1->stcont->CreateTable();
+//==== stcont end
+}
+//******
+
+dm1->Table5->DatabaseName="data\\"+StringReplace(DBEdit6->Text," ","z",Flags);
+dm1->Table6->DatabaseName="data\\"+StringReplace(DBEdit6->Text," ","z",Flags);
+if (dm1->Table5->Exists)
+     if (MessageDlg("Rescriu sold initial?", mtConfirmation, TMsgDlgButtons() << mbYes << mbNo, 0) == mrYes)
+        dm1->Table5->CreateTable();
+    else {;}
+else  dm1->Table5->CreateTable();
+if (dm1->Table6->Exists)
+     if (MessageDlg("Rescriu rulaj cumulat?", mtConfirmation, TMsgDlgButtons() << mbYes << mbNo, 0) == mrYes)
+        dm1->Table6->CreateTable();
+    else {;}
+else  dm1->Table6->CreateTable();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::DBEdit5KeyPress(TObject *Sender, char &Key)
+{
+if (Key==VK_RETURN) {
+        dm1->Table2->Append();
+       }
+}
+//---------------------------------------------------------------------------
+void __fastcall TMain::BackExecute(TObject *Sender)
+{
+dm1->Table3->Close();
+TabSheet3->TabVisible=false;
+TabSheet4->TabVisible=false;
+TabSheet5->TabVisible=false;
+TabSheet6->TabVisible=false;
+TabSheet7->TabVisible=false;
+TabSheet8->TabVisible=false;
+
+TabSheet2->TabVisible=true;        
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::DBGrid1CellClick(TColumn *Column)
+{
+ComboBox1->Text=dm1->Table1an->AsString;
+ComboBox2->Text=dm1->Table1luna->AsString;        
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::Button23Click(TObject *Sender)
+{
+if (dm1->Table4->Active==false) dm1->Table4->Active=true;
+//************************* atribution************
+
+//*******they call me the seeker...************
+Set < TLocateOption,0,1 > flags;
+flags <<loCaseInsensitive;
+
+bool seeker0,seeker1,seeker2,seeker3;
+dm1->Table2->Edit();
+if (dm1->Table2->RecNo==-1)
+        dm1->Table2Nr_crt->AsInteger=dm1->Table2->RecordCount+1;
+else
+        dm1->Table2Nr_crt->AsInteger=dm1->Table2->RecNo;
+dm1->Table2Sume_credit->AsFloat=DBEdit5->Field->AsFloat;
+                dm1->Table2->Post();
+        seeker0=dm1->Table4->Locate("Simbol", dm1->Table2Simbol_debit->AsString, flags);
+        seeker1=dm1->Table4->Locate("Simbol", dm1->Table2Simbol_credit->AsString, flags);
+//checking dependencies ********************
+        if (seeker0 & seeker1) {
+AnsiString dat,datbig,trunc,truncpos;
+int index,index1;
+//********************beginner *******************
+if (DBEdit3->Field->AsString.Length() == 3) {
+        if (DBEdit4->Field->AsString.Length() == 3) {
+//        ShowMessage("3-3");
+        dm1->Table4->Locate("Simbol",DBEdit3->Field->AsString, flags);
+        dat=dm1->Table4Conturi_debitoare->AsString;
+        index=dat.Pos(DBEdit4->Field->AsString);
+        }
+        if (DBEdit4->Field->AsString.Length() > 3) {
+//        ShowMessage("3-4");
+        dm1->Table4->Locate("Simbol",DBEdit3->Field->AsString, flags);
+        dat=dm1->Table4Conturi_debitoare->AsString;
+        index=dat.Pos(DBEdit4->Field->AsString);
+        if (index==0) index=dat.Pos(DBEdit4->Field->AsString.SubString(1,3));
+        }
+
+        }
+else    {
+        if (DBEdit4->Field->AsString.Length() == 3) {
+//        ShowMessage("4-3");
+        dm1->Table4->Locate("Simbol",DBEdit3->Field->AsString, flags);
+        dat=dm1->Table4Conturi_debitoare->AsString;
+        index=dat.Pos(DBEdit4->Field->AsString);
+        if (dat.Length() < 3) {
+        dm1->Table4->Locate("Simbol",DBEdit3->Field->AsString.SubString(1,3), flags);
+        dat=dm1->Table4Conturi_debitoare->AsString;
+        index=dat.Pos(DBEdit4->Field->AsString);
+        }
+        }
+        if (DBEdit4->Field->AsString.Length() > 3) {
+//        ShowMessage("4-4");
+        dm1->Table4->Locate("Simbol",DBEdit3->Field->AsString, flags);
+        dat=dm1->Table4Conturi_debitoare->AsString;
+        index=dat.Pos(DBEdit4->Field->AsString);
+        if (dat.Length() < 3) {
+        dm1->Table4->Locate("Simbol",DBEdit3->Field->AsString.SubString(1,3), flags);
+        dat=dm1->Table4Conturi_debitoare->AsString;
+        index=dat.Pos(DBEdit4->Field->AsString);
+        if (index==0) index=dat.Pos(DBEdit4->Field->AsString.SubString(1,3));
+        }
+        }
+        }
+//***** reciprocitate not really necesary but...****************************
+/* temp  /*/
+if (DBEdit4->Field->AsString.Length() == 3) {
+        if (DBEdit3->Field->AsString.Length() == 3) {
+//        ShowMessage("3-3");
+        dm1->Table4->Locate("Simbol",DBEdit4->Field->AsString, flags);
+        dat=dm1->Table4Conturi_creditoare->AsString;
+        index=dat.Pos(DBEdit3->Field->AsString);
+        }
+        if (DBEdit3->Field->AsString.Length() > 3) {
+//        ShowMessage("3-4");
+        dm1->Table4->Locate("Simbol",DBEdit4->Field->AsString, flags);
+        dat=dm1->Table4Conturi_creditoare->AsString;
+        index=dat.Pos(DBEdit3->Field->AsString);
+        if (index==0) index=dat.Pos(DBEdit3->Field->AsString.SubString(1,3));
+        }
+
+        }
+else    {
+        if (DBEdit3->Field->AsString.Length() == 3) {
+//        ShowMessage("4-3");
+        dm1->Table4->Locate("Simbol",DBEdit4->Field->AsString, flags);
+        dat=dm1->Table4Conturi_creditoare->AsString;
+        index=dat.Pos(DBEdit3->Field->AsString);
+        if (dat.Length() < 3) {
+        dm1->Table4->Locate("Simbol",DBEdit4->Field->AsString.SubString(1,3), flags);
+        dat=dm1->Table4Conturi_creditoare->AsString;
+        index=dat.Pos(DBEdit3->Field->AsString);
+        }
+        }
+        if (DBEdit3->Field->AsString.Length() > 3) {
+//        ShowMessage("4-4");
+        dm1->Table4->Locate("Simbol",DBEdit4->Field->AsString, flags);
+        dat=dm1->Table4Conturi_creditoare->AsString;
+        index=dat.Pos(DBEdit3->Field->AsString);
+        if (dat.Length() < 3) {
+        dm1->Table4->Locate("Simbol",DBEdit4->Field->AsString.SubString(1,3), flags);
+        dat=dm1->Table4Conturi_creditoare->AsString;
+        index=dat.Pos(DBEdit3->Field->AsString);
+        if (index==0) index=dat.Pos(DBEdit3->Field->AsString.SubString(1,3));
+        }
+        }
+        }
+/*/ // end temp   /*/
+//end reciprocitate *******************************************
+if (index==0 || index1==0)
+        ShowMessage("Eroare grad II, | Dependente incorecte: "+DBEdit3->Field->AsString+" - "+DBEdit4->Field->AsString);
+
+                }
+else ShowMessage("Eroare grad I, |Simbol necunoscut: "+DBEdit3->Field->AsString+" - "+DBEdit4->Field->AsString);
+        dm1->Table2->Next();
+
+//==
+bool track=dm1->Table4->Locate("Simbol",Edit1->Text, flags);
+if (!track) ShowMessage("Atenti la codul de inchidere! Nu exista in balanta - alegeti un cont dintre 121 si 120.01 !");
+dm1->Table4->Active=false;
+}
+//---------------------------------------------------------------------------
+
+
+
+
+void __fastcall TMain::Button24Click(TObject *Sender)
+{
+if (RadioGroup2->ItemIndex==0){
+       Jurnal->QuickRep1->Preview();
+        }
+if (RadioGroup2->ItemIndex==1){
+       Balanta->QuickRep1->Preview();
+        }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::SpeedButton11Click(TObject *Sender)
+{
+dm1->stcont->Open();
+contactiv->ShowModal();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain::SpeedButton12Click(TObject *Sender)
+{
+fisasah->ShowModal();
+}
+//---------------------------------------------------------------------------
+void __fastcall TMain::SpeedButton13Click(TObject *Sender)
+{
+dm1->Table4->Open();
+Hide();
+planconturi->Show();
+}
+//---------------------------------------------------------------------------
+
+

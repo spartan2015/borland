@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Project2.exe"/>
+    <OBJFILES value="Project2.obj Unit1.obj Unit2.obj Unit3.obj Unit5.obj Unit4.obj Unit6.obj 
+      Unit7.obj Unit8.obj Unit9.obj Unit10.obj Unit11.obj Unit12.obj Unit13.obj 
+      Unit14.obj Unit15.obj Unit16.obj Unit17.obj Unit18.obj Unit19.obj 
+      Unit20.obj Unit21.obj 
+      D:\IMAGE\GRAPHICS\BMPS\OFFCTLBR\SMALL\COLOR\Unit22.obj Unit23.obj"/>
+    <RESFILES value="Project2.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Unit1.dfm Unit2.dfm Unit3.dfm Unit5.dfm Unit4.dfm Unit6.dfm 
+      Unit7.dfm Unit8.dfm Unit9.dfm Unit10.dfm Unit11.dfm Unit12.dfm Unit13.dfm 
+      Unit14.dfm Unit15.dfm Unit16.dfm Unit17.dfm Unit18.dfm Unit19.dfm 
+      Unit20.dfm Unit21.dfm 
+      D:\IMAGE\GRAPHICS\BMPS\OFFCTLBR\SMALL\COLOR\Unit22.dfm Unit23.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib vcl.lib dbrtl.lib vcldb.lib bdertl.lib qrpt.lib vclx.lib bcbsmp.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi vcldb.bpi adortl.bpi 
+      ibsmp.bpi bdertl.bpi vcldbx.bpi qrpt.bpi teeui.bpi teedb.bpi tee.bpi 
+      dss.bpi teeqr.bpi ibxpress.bpi dsnap.bpi vclie.bpi inetdb.bpi inet.bpi 
+      nmfast.bpi webdsnap.bpi bcbie.bpi dclocx.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;D:\IMAGE\GRAPHICS\BMPS\OFFCTLBR\SMALL\COLOR"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="Project2.cpp"/>
+    <INCLUDEPATH value="D:\IMAGE\GRAPHICS\BMPS\OFFCTLBR\SMALL\COLOR;D:\CBuilder5\Examples\DBTasks\CSDemos\;D:\CBuilder5\Projects\;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="D:\IMAGE\GRAPHICS\BMPS\OFFCTLBR\SMALL\COLOR;D:\CBuilder5\Examples\DBTasks\CSDemos\;D:\CBuilder5\Projects\;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-src_suffix cpp -D_DEBUG -ID:\IMAGE\GRAPHICS\BMPS\OFFCTLBR\SMALL\COLOR 
+      -ID:\CBuilder5\Examples\DBTasks\CSDemos\. -ID:\CBuilder5\Projects\. 
+      -I$(BCB)\include -I$(BCB)\include\vcl -boa"/>
+    <CFLAG1 value="-O2 -H=d:\PROGRA~1\borland\CBUILD~1\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 
+      -b- -k -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Project2.cpp" FORMNAME="" UNITNAME="Project2" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Project2.res" FORMNAME="" UNITNAME="Project2" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit1.cpp" FORMNAME="MainFrame" UNITNAME="Unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit2.cpp" FORMNAME="D1" UNITNAME="Unit2" CONTAINERID="CCompiler" DESIGNCLASS="TDataModule" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit3.cpp" FORMNAME="statplata" UNITNAME="Unit3" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit5.cpp" FORMNAME="setup" UNITNAME="Unit5" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit4.cpp" FORMNAME="Rapoarte" UNITNAME="Unit4" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit6.cpp" FORMNAME="stat_plata" UNITNAME="Unit6" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit7.cpp" FORMNAME="cod_judet" UNITNAME="Unit7" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit8.cpp" FORMNAME="stat_plata_grupat" UNITNAME="Unit8" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit9.cpp" FORMNAME="Dir_dialog" UNITNAME="Unit9" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit10.cpp" FORMNAME="Declaratii_somaj" UNITNAME="Unit10" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit11.cpp" FORMNAME="Declaratii_cas" UNITNAME="Unit11" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit12.cpp" FORMNAME="a11" UNITNAME="Unit12" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit13.cpp" FORMNAME="a12" UNITNAME="Unit13" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit14.cpp" FORMNAME="a1" UNITNAME="Unit14" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit15.cpp" FORMNAME="a2" UNITNAME="Unit15" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit16.cpp" FORMNAME="a3" UNITNAME="Unit16" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit17.cpp" FORMNAME="PasswordDlg" UNITNAME="Unit17" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit18.cpp" FORMNAME="automatizare" UNITNAME="Unit18" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit19.cpp" FORMNAME="meter" UNITNAME="Unit19" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit20.cpp" FORMNAME="pontaj" UNITNAME="Unit20" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit21.cpp" FORMNAME="sarbatorilegale" UNITNAME="Unit21" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="D:\IMAGE\GRAPHICS\BMPS\OFFCTLBR\SMALL\COLOR\Unit22.cpp" FORMNAME="raport_pontaj" UNITNAME="Unit22" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit23.cpp" FORMNAME="Form23" UNITNAME="Unit23" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=6
+MinorVer=0
+Release=5
+Build=7
+Debug=0
+PreRelease=1
+Special=1
+Private=1
+DLL=0
+Locale=1048
+CodePage=1250
+
+[Version Info Keys]
+CompanyName=NEO Trading Ltd
+FileDescription=zeus.quad.org
+FileVersion=6.0.5.7
+InternalName=salarii
+LegalCopyright=true
+LegalTrademarks=NEO Trading LDT
+OriginalFilename=salarii
+ProductName=Electronic Arts Contab
+ProductVersion=6.0.0.0
+Comments=NEO Quad Productions
+SpecialBuild=
+PrivateBuild=
+
+[HistoryLists\hlIncludePath]
+Count=1
+Item0=D:\CBuilder5\Examples\DBTasks\CSDemos\;D:\CBuilder5\Projects\;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=1
+Item0=D:\CBuilder5\Examples\DBTasks\CSDemos\;D:\CBuilder5\Projects\;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

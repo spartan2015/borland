@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Project1.exe"/>
+    <OBJFILES value="Project1.obj Unit1.obj Unit2.obj Unit3.obj Unit4.obj Unit5.obj Unit6.obj 
+      Unit7.obj Unit8.obj Unit9.obj Unit10.obj Unit11.obj Unit12.obj Unit13.obj 
+      Unit14.obj Unit15splash.obj Unit15.obj Unit16.obj Unit17.obj Unit18.obj 
+      Unit19.obj Unit20.obj Unit21.obj Unit22.obj Unit23.obj Unit24.obj 
+      Unit25.obj Unit26.obj Unit27.obj D:\IMAGE\GRAPHICS\BMPS\Unit29.obj 
+      Unit28.obj Unit30.obj"/>
+    <RESFILES value="Project1.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Unit1.dfm Unit2.dfm Unit3.dfm Unit4.dfm Unit5.dfm Unit6.dfm 
+      Unit7.dfm Unit8.dfm Unit9.dfm Unit10.dfm Unit11.dfm Unit12.dfm Unit13.dfm 
+      Unit14.dfm Unit15splash.dfm Unit15.dfm Unit16.dfm Unit17.dfm Unit18.dfm 
+      Unit19.dfm Unit20.dfm Unit21.dfm Unit22.dfm Unit23.dfm Unit24.dfm 
+      Unit25.dfm Unit26.dfm Unit27.dfm D:\IMAGE\GRAPHICS\BMPS\Unit29.dfm 
+      Unit28.dfm Unit30.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib vcl.lib dbrtl.lib vcldb.lib bdertl.lib qrpt.lib vclx.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi vcldb.bpi adortl.bpi 
+      ibsmp.bpi bdertl.bpi vcldbx.bpi qrpt.bpi teeui.bpi teedb.bpi tee.bpi 
+      dss.bpi teeqr.bpi ibxpress.bpi dsnap.bpi vclie.bpi inetdb.bpi inet.bpi 
+      nmfast.bpi webdsnap.bpi bcbie.bpi dclocx.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;D:\IMAGE\GRAPHICS\BMPS"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="Project1.cpp"/>
+    <INCLUDEPATH value="..\Car;D:\IMAGE\GRAPHICS\BMPS;D:\;R\;ER\;TER;UTER;PUTER;MPUTER;OMPUTER;COMPUTER;D:\COMPUTER;S\COMPUTER;NS\COMPUTER;ONS\COMPUTER;CONS\COMPUTER;ICONS\COMPUTER;D:\ICONS\COMPUTER;S\ICONS\COMPUTER;CS\ICONS\COMPUTER;ICS\ICONS\COMPUTER;HICS\ICONS\COMPUTER;PHICS\ICONS\COMPUTER;APHICS\ICONS\COMPUTER;RAPHICS\ICONS\COMPUTER;GRAPHICS\ICONS\COMPUTER;D:\GRAPHICS\ICONS\COMPUTER;E\GRAPHICS\ICONS\COMPUTER;GE\GRAPHICS\ICONS\COMPUTER;AGE\GRAPHICS\ICONS\COMPUTER;MAGE\GRAPHICS\ICONS\COMPUTER;IMAGE\GRAPHICS\ICONS\COMPUTER;:\IMAGE\GRAPHICS\ICONS\COMPUTER;D:\IMAGE\GRAPHICS\ICONS\COMPUTER;D:\CBuilder5\Projects\;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\Car;D:\IMAGE\GRAPHICS\BMPS;D:\;R\;ER\;TER;UTER;PUTER;MPUTER;OMPUTER;COMPUTER;D:\COMPUTER;S\COMPUTER;NS\COMPUTER;ONS\COMPUTER;CONS\COMPUTER;ICONS\COMPUTER;D:\ICONS\COMPUTER;S\ICONS\COMPUTER;CS\ICONS\COMPUTER;ICS\ICONS\COMPUTER;HICS\ICONS\COMPUTER;PHICS\ICONS\COMPUTER;APHICS\ICONS\COMPUTER;RAPHICS\ICONS\COMPUTER;GRAPHICS\ICONS\COMPUTER;D:\GRAPHICS\ICONS\COMPUTER;E\GRAPHICS\ICONS\COMPUTER;GE\GRAPHICS\ICONS\COMPUTER;AGE\GRAPHICS\ICONS\COMPUTER;MAGE\GRAPHICS\ICONS\COMPUTER;IMAGE\GRAPHICS\ICONS\COMPUTER;:\IMAGE\GRAPHICS\ICONS\COMPUTER;D:\IMAGE\GRAPHICS\ICONS\COMPUTER;D:\CBuilder5\Projects\;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I..\Car -ID:\IMAGE\GRAPHICS\BMPS -ID:\. -IR\. -IER\. -ITER -IUTER -IPUTER 
+      -IMPUTER -IOMPUTER -ICOMPUTER -ID:\COMPUTER -IS\COMPUTER -INS\COMPUTER 
+      -IONS\COMPUTER -ICONS\COMPUTER -IICONS\COMPUTER -ID:\ICONS\COMPUTER 
+      -IS\ICONS\COMPUTER -ICS\ICONS\COMPUTER -IICS\ICONS\COMPUTER 
+      -IHICS\ICONS\COMPUTER -IPHICS\ICONS\COMPUTER -IAPHICS\ICONS\COMPUTER 
+      -IRAPHICS\ICONS\COMPUTER -IGRAPHICS\ICONS\COMPUTER 
+      -ID:\GRAPHICS\ICONS\COMPUTER -IE\GRAPHICS\ICONS\COMPUTER 
+      -IGE\GRAPHICS\ICONS\COMPUTER -IAGE\GRAPHICS\ICONS\COMPUTER 
+      -IMAGE\GRAPHICS\ICONS\COMPUTER -IIMAGE\GRAPHICS\ICONS\COMPUTER 
+      -I:\IMAGE\GRAPHICS\ICONS\COMPUTER -ID:\IMAGE\GRAPHICS\ICONS\COMPUTER 
+      -ID:\CBuilder5\Projects\. -I$(BCB)\include -I$(BCB)\include\vcl 
+      -src_suffix cpp -D_DEBUG -boa"/>
+    <CFLAG1 value="-vGc -vGt -vGd -O2 -H=d:\PROGRA~1\borland\CBUILD~1\lib\vcl60.csm -Hc -Vx 
+      -Ve -X- -r- -a8 -b- -k -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="cg32.lib $(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Project1.cpp" FORMNAME="" UNITNAME="Project1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Project1.res" FORMNAME="" UNITNAME="Project1" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit1.cpp" FORMNAME="Main" UNITNAME="Unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit2.cpp" FORMNAME="dm" UNITNAME="Unit2" CONTAINERID="CCompiler" DESIGNCLASS="TDataModule" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit3.cpp" FORMNAME="Depozit" UNITNAME="Unit3" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit4.cpp" FORMNAME="bios" UNITNAME="Unit4" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit5.cpp" FORMNAME="factura" UNITNAME="Unit5" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit6.cpp" FORMNAME="raport_factura" UNITNAME="Unit6" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit7.cpp" FORMNAME="firme" UNITNAME="Unit7" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit8.cpp" FORMNAME="delegati" UNITNAME="Unit8" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit9.cpp" FORMNAME="msgmagazie" UNITNAME="Unit9" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit10.cpp" FORMNAME="magazie" UNITNAME="Unit10" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit11.cpp" FORMNAME="notareceptie" UNITNAME="Unit11" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit12.cpp" FORMNAME="fisamagazie" UNITNAME="Unit12" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit13.cpp" FORMNAME="casabanca" UNITNAME="Unit13" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit14.cpp" FORMNAME="seeker" UNITNAME="Unit14" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit15splash.cpp" FORMNAME="splash" UNITNAME="Unit15splash" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit15.cpp" FORMNAME="mesajcasabanca" UNITNAME="Unit15" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit16.cpp" FORMNAME="registrucasa" UNITNAME="Unit16" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit17.cpp" FORMNAME="raportcasalei" UNITNAME="Unit17" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit18.cpp" FORMNAME="raportcomplet" UNITNAME="Unit18" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit19.cpp" FORMNAME="solder" UNITNAME="Unit19" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit20.cpp" FORMNAME="moneda" UNITNAME="Unit20" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit21.cpp" FORMNAME="casabancalei" UNITNAME="Unit21" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit22.cpp" FORMNAME="registrucasalei" UNITNAME="Unit22" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit23.cpp" FORMNAME="banca" UNITNAME="Unit23" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit24.cpp" FORMNAME="raport_banca_lei" UNITNAME="Unit24" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit25.cpp" FORMNAME="raport_banca_valuta" UNITNAME="Unit25" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit26.cpp" FORMNAME="platafactura" UNITNAME="Unit26" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit27.cpp" FORMNAME="biosvaluta" UNITNAME="Unit27" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="D:\IMAGE\GRAPHICS\BMPS\Unit29.cpp" FORMNAME="raport_factura_valuta" UNITNAME="Unit29" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit28.cpp" FORMNAME="cproduse" UNITNAME="Unit28" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit30.cpp" FORMNAME="cservicii" UNITNAME="Unit30" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=1
+MinorVer=2
+Release=1
+Build=1
+Debug=1
+PreRelease=1
+Special=1
+Private=1
+DLL=0
+Locale=1048
+CodePage=1250
+
+[Version Info Keys]
+CompanyName=NEO Trading LTD
+FileDescription=Facturi - debug build
+FileVersion=1.2.1.1
+InternalName=Facturi - Module 3
+LegalCopyright=Yes
+LegalTrademarks=NEO Application Quad Series
+OriginalFilename=Facturi
+ProductName=NEO Application - Facturi
+ProductVersion=1.0.0.0
+Comments=Special build - debug mode
+SpecialBuild=debug release
+PrivateBuild=trial
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=1
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>
